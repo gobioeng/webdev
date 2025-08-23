@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with the latest news in biomedical engineering - GoBioEng Articles">
+    <title>Articles - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link active">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link active">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
+            <i class="fas fa-moon"></i> Toggle Theme
+        </a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Articles</span>
+                </div>
+                <h1 class="page-hero-title">Latest Articles</h1>
+                <p class="page-hero-subtitle">Stay up-to-date with the latest news and developments in biomedical engineering</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Filter -->
+    <section style="background-color: var(--white); padding: 2rem 0;">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <button class="btn" style="background-color: var(--primary); color: white;">All Topics</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Radiotherapy</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Career</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Technology</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Research</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles">
+        <div class="container">
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/ai-in-biomedical-engineering.jpg" alt="AI in Biomedical Engineering" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">The Transformative Role of AI in Biomedical Engineering</h3>
+                        <div class="article-meta">August 23, 2025 | By GoBioEng Team</div>
+                        <p class="article-excerpt">
+                            Explore how artificial intelligence is transforming biomedical engineering, from diagnostics and drug discovery to personalized medicine and robotic surgery.
+                        </p>
+                        <a href="articles/articles_ai-in-biomedical-engineering.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/radiotherapy-engineering.jpg" alt="Radiotherapy Engineering" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Exploring a Career in Radiotherapy Engineering</h3>
+                        <div class="article-meta">February 26, 2025 | By Tanmay Pandey</div>
+                        <p class="article-excerpt">
+                            Radiotherapy engineering is a dynamic field at the intersection of engineering, physics, and healthcare. Discover key responsibilities and career opportunities in this growing field.
+                        </p>
+                        <a href="articles/radiotherapy-engineering-career.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/eng-job-rt.jpg" alt="NHS Careers" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Exciting Careers in Radiotherapy and Biomedical Engineering</h3>
+                        <div class="article-meta">February 25, 2025 | By Tanmay Pandey</div>
+                        <p class="article-excerpt">
+                            Discover rewarding career paths in radiotherapy and biomedical engineering with the NHS, combining cutting-edge technology with meaningful impact on patient care.
+                        </p>
+                        <a href="articles/nhs-careers-biomedical-engineering.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/medical-physics.jpg" alt="Medical Physics" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Medical Physics in Modern Healthcare</h3>
+                        <div class="article-meta">February 15, 2025 | By Dr. Sarah Johnson</div>
+                        <p class="article-excerpt">
+                            Explore the critical role of medical physics in healthcare, from radiation therapy to diagnostic imaging, and the latest innovations in this evolving field.
+                        </p>
+                        <a href="articles/articles_medical-physics-modern-healthcare.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/halog-dashboard.jpg" alt="HALog Dashboard" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Introducing HALog: Professional LINAC Water System Monitor</h3>
+                        <div class="article-meta">August 20, 2025 | By GoBioEng Team</div>
+                        <p class="article-excerpt">
+                            We're excited to announce the release of HALog, our professional desktop application designed for monitoring and analyzing water system parameters in Linear Accelerator (LINAC) machines.
+                        </p>
+                        <a href="halog.html" class="article-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../assets/images/biomedical-innovations.jpg" alt="Biomedical Innovations" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Top Biomedical Engineering Innovations of 2025</h3>
+                        <div class="article-meta">January 30, 2025 | By Michael Chen</div>
+                        <p class="article-excerpt">
+                            From AI-powered diagnostic tools to advanced prosthetics, discover the groundbreaking biomedical engineering innovations making waves in 2025.
+                        </p>
+                        <a href="#" class="article-link">
+                            Coming Soon <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div style="display: flex; justify-content: center; margin-top: 3rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="#" class="btn" style="background-color: var(--primary); color: white;">1</a>
+                    <a href="#" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">2</a>
+                    <a href="#" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">3</a>
+                    <span style="display: flex; align-items: center; padding: 0 0.5rem;">...</span>
+                    <a href="#" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Next</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Stay Updated with GoBioEng</h2>
+                <p class="cta-description">
+                    Subscribe to receive the latest articles, news, and updates directly in your inbox.
+                </p>
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Your email address" required 
+                               style="flex-grow: 1; padding: 0.75rem; border-radius: var(--border-radius); border: none;">
+                        <button type="submit" class="btn btn-primary" style="background-color: white; color: var(--primary);">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                            <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                        </svg>
+                        GOBIOENG
+                    </a>
+                    <p class="footer-about">
+                        Providing professional tools and educational resources for the biomedical engineering community.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="resources.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="articles/radiotherapy-engineering-career.html">Radiotherapy Careers</a></li>
+                        <li class="footer-link"><a href="articles.html">Industry Insights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
