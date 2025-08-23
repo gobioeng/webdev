@@ -30,6 +30,107 @@ function toggleDarkMode() {
     }
 }
 
+// Scroll-based header behavior
+function handleHeaderScroll() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
+// Lazy loading for images
+function handleLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for older browsers
+        images.forEach(img => {
+            img.src = img.dataset.src || img.src;
+            img.classList.add('loaded');
+        });
+    }
+}
+
+// Handle missing images with placeholders
+function handleMissingImages() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            if (!this.classList.contains('placeholder-handled')) {
+                this.classList.add('placeholder-handled');
+                
+                // Create placeholder div
+                const placeholder = document.createElement('div');
+                placeholder.className = 'image-placeholder';
+                placeholder.style.width = this.style.width || this.getAttribute('width') || '100%';
+                placeholder.style.height = this.style.height || this.getAttribute('height') || '200px';
+                placeholder.innerHTML = '<i class="fas fa-image"></i><br>Image placeholder';
+                
+                // Replace image with placeholder
+                this.parentNode.replaceChild(placeholder, this);
+            }
+        });
+    });
+}
+
+// Smooth scroll for anchor links
+function handleSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Intersection Observer for animations
+function handleScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.feature-card, .article-card, .resource-card');
+    
+    if ('IntersectionObserver' in window) {
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            animationObserver.observe(el);
+        });
+    }
+}
+
 // Set initial theme based on saved preference
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
@@ -41,6 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.className = 'fas fa-sun';
         });
     }
+
+    // Initialize all functionality
+    handleLazyLoading();
+    handleMissingImages();
+    handleSmoothScroll();
+    handleScrollAnimations();
+    
+    // Add scroll listener for header
+    window.addEventListener('scroll', handleHeaderScroll);
 
     // Handle FAQ items
     const faqItems = document.querySelectorAll('.faq-item');
