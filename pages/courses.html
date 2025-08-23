@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online courses for biomedical engineering, radiotherapy, and AI in medical engineering - GoBioEng">
+    <title>Online Courses - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="support.html" class="nav-link">Support</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <a href="resources.html">Resources</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Online Courses</span>
+                </div>
+                <h1 class="page-hero-title">Online Courses</h1>
+                <p class="page-hero-subtitle">Professional courses in biomedical engineering, radiotherapy, AI in healthcare, and medical technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Filter -->
+    <section style="background-color: var(--white); padding: 2rem 0;">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="resources.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">All Resources</a>
+                <a href="books.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Books</a>
+                <button class="btn" style="background-color: var(--primary); color: white;">Courses</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Software</button>
+                <a href="videos.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundamental Biomedical Engineering Courses -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Fundamental Biomedical Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course1.jpg" alt="Introduction to Biomedical Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Introduction to Biomedical Engineering</h3>
+                        <p class="resource-meta">MIT OpenCourseWare • 12 weeks • Free</p>
+                        <p class="resource-description">Comprehensive introduction to biomedical engineering principles, covering biomechanics, biomaterials, biosensors, and medical device design.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Fundamentals</span>
+                            <span class="resource-tag">Free</span>
+                        </div>
+                        <a href="#" onclick="openModal('course1-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course2.jpg" alt="Biomedical Signal Processing">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biomedical Signal Processing</h3>
+                        <p class="resource-meta">Coursera • 8 weeks • $49/month</p>
+                        <p class="resource-description">Master the techniques for processing and analyzing biological signals like ECG, EEG, EMG, and other physiological measurements.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Signal Processing</span>
+                            <span class="resource-tag">Intermediate</span>
+                        </div>
+                        <a href="#" onclick="openModal('course2-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course3.jpg" alt="Medical Device Design">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Device Design and Regulation</h3>
+                        <p class="resource-meta">Stanford Online • 10 weeks • $299</p>
+                        <p class="resource-description">Learn the process of designing safe and effective medical devices from concept to market, including regulatory compliance.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Design</span>
+                            <span class="resource-tag">Regulatory</span>
+                        </div>
+                        <a href="#" onclick="openModal('course3-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radiotherapy Engineering Courses -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Radiotherapy Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course4.jpg" alt="Introduction to Radiotherapy Physics">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Introduction to Radiotherapy Physics</h3>
+                        <p class="resource-meta">Medical Physics Academy • 8 weeks • $199</p>
+                        <p class="resource-description">Learn the fundamental physics principles behind modern radiotherapy treatments, including dosimetry and treatment planning.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Radiotherapy</span>
+                            <span class="resource-tag">Physics</span>
+                        </div>
+                        <a href="#" onclick="openModal('course4-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course5.jpg" alt="Linear Accelerator Technology">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Linear Accelerator Technology</h3>
+                        <p class="resource-meta">ESTRO Education • 6 weeks • €149</p>
+                        <p class="resource-description">Deep dive into LINAC technology, beam production, multileaf collimators, and advanced treatment techniques like IMRT and VMAT.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">LINAC</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" onclick="openModal('course5-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course6.jpg" alt="Stereotactic Radiosurgery">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Stereotactic Radiosurgery and SBRT</h3>
+                        <p class="resource-meta">AAPM • 4 weeks • $299</p>
+                        <p class="resource-description">Master the principles and techniques of stereotactic radiosurgery, including Gamma Knife, CyberKnife, and LINAC-based SRS.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">SRS</span>
+                            <span class="resource-tag">SBRT</span>
+                        </div>
+                        <a href="#" onclick="openModal('course6-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI in Medical Engineering Courses -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">AI in Medical Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course7.jpg" alt="Machine Learning for Healthcare">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Machine Learning for Healthcare</h3>
+                        <p class="resource-meta">edX • 10 weeks • $149</p>
+                        <p class="resource-description">Apply machine learning algorithms to healthcare data, including medical imaging, electronic health records, and clinical prediction models.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Healthcare</span>
+                        </div>
+                        <a href="#" onclick="openModal('course7-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course8.jpg" alt="Deep Learning for Medical Imaging">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Deep Learning for Medical Imaging</h3>
+                        <p class="resource-meta">Udacity • 4 months • $399/month</p>
+                        <p class="resource-description">Learn to apply deep learning techniques to medical imaging tasks including image classification, segmentation, and computer-aided diagnosis.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Deep Learning</span>
+                            <span class="resource-tag">Medical Imaging</span>
+                        </div>
+                        <a href="#" onclick="openModal('course8-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course9.jpg" alt="AI in Drug Discovery">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">AI in Drug Discovery and Development</h3>
+                        <p class="resource-meta">Coursera • 6 weeks • $79/month</p>
+                        <p class="resource-description">Explore how artificial intelligence is transforming pharmaceutical research, from molecular design to clinical trial optimization.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Drug Discovery</span>
+                        </div>
+                        <a href="#" onclick="openModal('course9-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Specialization Courses -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Advanced Specializations</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course10.jpg" alt="Tissue Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Tissue Engineering and Regenerative Medicine</h3>
+                        <p class="resource-meta">Johns Hopkins • 8 weeks • $249</p>
+                        <p class="resource-description">Learn the principles of tissue engineering, including scaffold design, cell culture, bioreactors, and clinical applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Tissue Engineering</span>
+                            <span class="resource-tag">Regenerative Medicine</span>
+                        </div>
+                        <a href="#" onclick="openModal('course10-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course11.jpg" alt="Neural Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Neural Engineering and Brain-Computer Interfaces</h3>
+                        <p class="resource-meta">University of Washington • 12 weeks • $399</p>
+                        <p class="resource-description">Explore the interface between the brain and technology, including neural signal processing, neuroprosthetics, and brain stimulation.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Neural Engineering</span>
+                            <span class="resource-tag">BCI</span>
+                        </div>
+                        <a href="#" onclick="openModal('course11-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course12.jpg" alt="Biosensors and Wearable Devices">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biosensors and Wearable Health Devices</h3>
+                        <p class="resource-meta">Georgia Tech • 6 weeks • $199</p>
+                        <p class="resource-description">Design and develop biosensors and wearable devices for continuous health monitoring and point-of-care diagnostics.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Biosensors</span>
+                            <span class="resource-tag">Wearables</span>
+                        </div>
+                        <a href="#" onclick="openModal('course12-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Certification Courses -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course13.jpg" alt="Medical Physics Certification">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Physics Board Preparation</h3>
+                        <p class="resource-meta">ABR Prep Course • 16 weeks • $1,299</p>
+                        <p class="resource-description">Comprehensive preparation for the American Board of Radiology medical physics certification exam, covering all major topics.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Certification</span>
+                            <span class="resource-tag">Medical Physics</span>
+                        </div>
+                        <a href="#" onclick="openModal('course13-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course14.jpg" alt="Clinical Engineering Certification">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Clinical Engineering Certification</h3>
+                        <p class="resource-meta">ACCE • 12 weeks • $899</p>
+                        <p class="resource-description">Prepare for the CCE (Certified Clinical Engineer) examination, covering healthcare technology management and safety.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Certification</span>
+                            <span class="resource-tag">Clinical Engineering</span>
+                        </div>
+                        <a href="#" onclick="openModal('course14-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course15.jpg" alt="Regulatory Affairs Certification">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Device Regulatory Affairs</h3>
+                        <p class="resource-meta">RAPS • 8 weeks • $1,499</p>
+                        <p class="resource-description">Master FDA regulations, quality systems, and global regulatory requirements for medical device development and approval.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Regulatory</span>
+                            <span class="resource-tag">FDA</span>
+                        </div>
+                        <a href="#" onclick="openModal('course15-details')" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4 class="footer-heading">About GoBioEng</h4>
+                    <p class="footer-text">
+                        Empowering biomedical engineers with cutting-edge resources, tools, and insights to advance healthcare technology and improve patient outcomes.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="books.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="videos.html">Educational Videos</a></li>
+                        <li class="footer-link"><a href="courses.html">Online Courses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Detail Modals -->
+    <div id="course1-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course1-details')">&times;</button>
+            <h2>Introduction to Biomedical Engineering</h2>
+            <p><strong>Provider:</strong> MIT OpenCourseWare</p>
+            <p><strong>Duration:</strong> 12 weeks</p>
+            <p><strong>Price:</strong> Free</p>
+            <p><strong>Prerequisites:</strong> Basic calculus and physics</p>
+            <p><strong>Description:</strong> This comprehensive course covers the fundamental principles of biomedical engineering, including biomechanics, biomaterials, biosensors, and medical device design. Students will learn how engineering principles are applied to solve problems in medicine and biology.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course1-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course2-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course2-details')">&times;</button>
+            <h2>Biomedical Signal Processing</h2>
+            <p><strong>Provider:</strong> Coursera</p>
+            <p><strong>Duration:</strong> 8 weeks</p>
+            <p><strong>Price:</strong> $49/month</p>
+            <p><strong>Prerequisites:</strong> MATLAB/Python programming, signal processing basics</p>
+            <p><strong>Description:</strong> Master the techniques for processing and analyzing biological signals like ECG, EEG, EMG, and other physiological measurements. Learn filtering, feature extraction, and pattern recognition methods.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course2-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course3-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course3-details')">&times;</button>
+            <h2>Medical Device Design and Regulation</h2>
+            <p><strong>Provider:</strong> Stanford Online</p>
+            <p><strong>Duration:</strong> 10 weeks</p>
+            <p><strong>Price:</strong> $299</p>
+            <p><strong>Prerequisites:</strong> Engineering design background</p>
+            <p><strong>Description:</strong> Learn the complete process of medical device development from concept to market, including design controls, risk management, FDA regulations, and clinical validation.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course3-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course4-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course4-details')">&times;</button>
+            <h2>Introduction to Radiotherapy Physics</h2>
+            <p><strong>Provider:</strong> Medical Physics Academy</p>
+            <p><strong>Duration:</strong> 8 weeks</p>
+            <p><strong>Price:</strong> $199</p>
+            <p><strong>Prerequisites:</strong> Physics and mathematics background</p>
+            <p><strong>Description:</strong> Learn the fundamental physics principles behind modern radiotherapy treatments, including radiation interaction, dosimetry, treatment planning, and quality assurance.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course4-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course5-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course5-details')">&times;</button>
+            <h2>Linear Accelerator Technology</h2>
+            <p><strong>Provider:</strong> ESTRO Education</p>
+            <p><strong>Duration:</strong> 6 weeks</p>
+            <p><strong>Price:</strong> €149</p>
+            <p><strong>Prerequisites:</strong> Basic radiotherapy physics knowledge</p>
+            <p><strong>Description:</strong> Deep dive into LINAC technology, including beam production, multileaf collimators, and advanced treatment techniques like IMRT, VMAT, and stereotactic treatments.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course5-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course6-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course6-details')">&times;</button>
+            <h2>Stereotactic Radiosurgery and SBRT</h2>
+            <p><strong>Provider:</strong> AAPM</p>
+            <p><strong>Duration:</strong> 4 weeks</p>
+            <p><strong>Price:</strong> $299</p>
+            <p><strong>Prerequisites:</strong> Radiotherapy physics background</p>
+            <p><strong>Description:</strong> Master the principles and techniques of stereotactic radiosurgery, including Gamma Knife, CyberKnife, and LINAC-based SRS systems for brain and body treatments.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course6-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course7-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course7-details')">&times;</button>
+            <h2>Machine Learning for Healthcare</h2>
+            <p><strong>Provider:</strong> edX</p>
+            <p><strong>Duration:</strong> 10 weeks</p>
+            <p><strong>Price:</strong> $149</p>
+            <p><strong>Prerequisites:</strong> Programming skills, basic statistics</p>
+            <p><strong>Description:</strong> Apply machine learning algorithms to healthcare data, including medical imaging, electronic health records, and clinical prediction models. Learn about ethical considerations and regulatory requirements.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course7-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course8-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course8-details')">&times;</button>
+            <h2>Deep Learning for Medical Imaging</h2>
+            <p><strong>Provider:</strong> Udacity</p>
+            <p><strong>Duration:</strong> 4 months</p>
+            <p><strong>Price:</strong> $399/month</p>
+            <p><strong>Prerequisites:</strong> Python programming, deep learning fundamentals</p>
+            <p><strong>Description:</strong> Learn to apply deep learning techniques to medical imaging tasks including image classification, segmentation, and computer-aided diagnosis using CNNs and advanced architectures.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course8-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course9-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course9-details')">&times;</button>
+            <h2>AI in Drug Discovery and Development</h2>
+            <p><strong>Provider:</strong> Coursera</p>
+            <p><strong>Duration:</strong> 6 weeks</p>
+            <p><strong>Price:</strong> $79/month</p>
+            <p><strong>Prerequisites:</strong> Basic chemistry and biology knowledge</p>
+            <p><strong>Description:</strong> Explore how artificial intelligence is transforming pharmaceutical research, from molecular design to clinical trial optimization and personalized medicine approaches.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course9-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course10-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course10-details')">&times;</button>
+            <h2>Tissue Engineering and Regenerative Medicine</h2>
+            <p><strong>Provider:</strong> Johns Hopkins</p>
+            <p><strong>Duration:</strong> 8 weeks</p>
+            <p><strong>Price:</strong> $249</p>
+            <p><strong>Prerequisites:</strong> Biology and materials science background</p>
+            <p><strong>Description:</strong> Learn the principles of tissue engineering, including scaffold design, cell culture, bioreactors, and clinical applications in regenerative medicine.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course10-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course11-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course11-details')">&times;</button>
+            <h2>Neural Engineering and Brain-Computer Interfaces</h2>
+            <p><strong>Provider:</strong> University of Washington</p>
+            <p><strong>Duration:</strong> 12 weeks</p>
+            <p><strong>Price:</strong> $399</p>
+            <p><strong>Prerequisites:</strong> Neuroscience and engineering background</p>
+            <p><strong>Description:</strong> Explore the interface between the brain and technology, including neural signal processing, neuroprosthetics, brain stimulation, and ethical considerations.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course11-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course12-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course12-details')">&times;</button>
+            <h2>Biosensors and Wearable Health Devices</h2>
+            <p><strong>Provider:</strong> Georgia Tech</p>
+            <p><strong>Duration:</strong> 6 weeks</p>
+            <p><strong>Price:</strong> $199</p>
+            <p><strong>Prerequisites:</strong> Electronics and biochemistry basics</p>
+            <p><strong>Description:</strong> Design and develop biosensors and wearable devices for continuous health monitoring and point-of-care diagnostics, including electrochemical and optical sensors.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course12-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course13-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course13-details')">&times;</button>
+            <h2>Medical Physics Board Preparation</h2>
+            <p><strong>Provider:</strong> ABR Prep Course</p>
+            <p><strong>Duration:</strong> 16 weeks</p>
+            <p><strong>Price:</strong> $1,299</p>
+            <p><strong>Prerequisites:</strong> Medical physics graduate degree</p>
+            <p><strong>Description:</strong> Comprehensive preparation for the American Board of Radiology medical physics certification exam, covering all major topics including imaging physics, radiation therapy, and nuclear medicine.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course13-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course14-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course14-details')">&times;</button>
+            <h2>Clinical Engineering Certification</h2>
+            <p><strong>Provider:</strong> ACCE</p>
+            <p><strong>Duration:</strong> 12 weeks</p>
+            <p><strong>Price:</strong> $899</p>
+            <p><strong>Prerequisites:</strong> Engineering degree and healthcare experience</p>
+            <p><strong>Description:</strong> Prepare for the CCE (Certified Clinical Engineer) examination, covering healthcare technology management, safety, regulatory compliance, and risk management.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course14-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="course15-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('course15-details')">&times;</button>
+            <h2>Medical Device Regulatory Affairs</h2>
+            <p><strong>Provider:</strong> RAPS</p>
+            <p><strong>Duration:</strong> 8 weeks</p>
+            <p><strong>Price:</strong> $1,499</p>
+            <p><strong>Prerequisites:</strong> Medical device industry experience</p>
+            <p><strong>Description:</strong> Master FDA regulations, quality systems, and global regulatory requirements for medical device development and approval, including 510(k), PMA, and international standards.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <button onclick="closeModal('course15-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

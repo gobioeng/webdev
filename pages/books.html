@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential books for biomedical engineering, radiotherapy, and AI in medical engineering - GoBioEng">
+    <title>Biomedical Engineering Books - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="support.html" class="nav-link">Support</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <a href="resources.html">Resources</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Books</span>
+                </div>
+                <h1 class="page-hero-title">Biomedical Engineering Books</h1>
+                <p class="page-hero-subtitle">Essential textbooks and references for biomedical engineering, radiotherapy, AI in healthcare, and medical technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Filter -->
+    <section style="background-color: var(--white); padding: 2rem 0;">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="resources.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">All Resources</a>
+                <button class="btn" style="background-color: var(--primary); color: white;">Books</button>
+                <a href="courses.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Courses</a>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Software</button>
+                <a href="videos.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundamental Biomedical Engineering Books -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Fundamental Textbooks</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book1.jpg" alt="Fundamentals of Biomedical Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Fundamentals of Biomedical Engineering</h3>
+                        <p class="resource-meta">By John Doe • 3rd Edition</p>
+                        <p class="resource-description">A comprehensive guide to the principles and applications of biomedical engineering, covering biomechanics, biomaterials, and medical device design.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Textbook</span>
+                            <span class="resource-tag">Fundamentals</span>
+                        </div>
+                        <a href="#" onclick="openModal('book1-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book2.jpg" alt="Neural Engineering Handbook">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Neural Engineering Handbook</h3>
+                        <p class="resource-meta">By Jane Smith • 2nd Edition</p>
+                        <p class="resource-description">In-depth exploration of neural engineering, covering brain-computer interfaces, neural prosthetics, and neurostimulation systems.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Neural</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" onclick="openModal('book2-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book3.jpg" alt="Medical Imaging Systems">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Imaging Systems</h3>
+                        <p class="resource-meta">By Robert Johnson • 4th Edition</p>
+                        <p class="resource-description">Comprehensive overview of modern medical imaging technologies including MRI, CT, ultrasound, and their clinical applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Imaging</span>
+                            <span class="resource-tag">Clinical</span>
+                        </div>
+                        <a href="#" onclick="openModal('book3-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radiotherapy Engineering Books -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Radiotherapy Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book4.jpg" alt="Physics of Radiation Therapy">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Physics of Radiation Therapy</h3>
+                        <p class="resource-meta">By Faiz Khan • 6th Edition</p>
+                        <p class="resource-description">The definitive textbook on radiation therapy physics, covering dosimetry, treatment planning, and quality assurance procedures.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Radiotherapy</span>
+                            <span class="resource-tag">Physics</span>
+                        </div>
+                        <a href="#" onclick="openModal('book4-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book5.jpg" alt="Linear Accelerators for Radiation Therapy">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Linear Accelerators for Radiation Therapy</h3>
+                        <p class="resource-meta">By David Greene & Peter Williams • 3rd Edition</p>
+                        <p class="resource-description">Comprehensive guide to linear accelerator technology, beam production, and modern radiotherapy techniques including IMRT and VMAT.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">LINAC</span>
+                            <span class="resource-tag">Technology</span>
+                        </div>
+                        <a href="#" onclick="openModal('book5-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book6.jpg" alt="Stereotactic Radiosurgery">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Stereotactic Radiosurgery and Radiotherapy</h3>
+                        <p class="resource-meta">By Lawrence Marks • 1st Edition</p>
+                        <p class="resource-description">Advanced techniques in stereotactic radiosurgery, including Gamma Knife, CyberKnife, and LINAC-based SRS systems.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">SRS</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" onclick="openModal('book6-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI in Medical Engineering Books -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">AI in Medical Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book7.jpg" alt="Machine Learning in Medicine">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Machine Learning in Medicine</h3>
+                        <p class="resource-meta">By Ton Weiss & Paul Natarajan • 2nd Edition</p>
+                        <p class="resource-description">Practical guide to applying machine learning algorithms in healthcare, including medical imaging, clinical decision support, and predictive analytics.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Machine Learning</span>
+                        </div>
+                        <a href="#" onclick="openModal('book7-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book8.jpg" alt="Deep Learning for Medical Image Analysis">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Deep Learning for Medical Image Analysis</h3>
+                        <p class="resource-meta">By Gustavo Carneiro et al. • 1st Edition</p>
+                        <p class="resource-description">Comprehensive coverage of deep learning applications in medical imaging, including CNNs, GANs, and advanced neural architectures.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Deep Learning</span>
+                            <span class="resource-tag">Medical Imaging</span>
+                        </div>
+                        <a href="#" onclick="openModal('book8-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book9.jpg" alt="AI in Drug Discovery">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Artificial Intelligence in Drug Discovery</h3>
+                        <p class="resource-meta">By Nathan Brown • 1st Edition</p>
+                        <p class="resource-description">Explore how AI is revolutionizing pharmaceutical research, from molecular design to clinical trial optimization and personalized medicine.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Drug Discovery</span>
+                        </div>
+                        <a href="#" onclick="openModal('book9-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Topics Books -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Advanced Topics</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book10.jpg" alt="Tissue Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Tissue Engineering: Principles and Practices</h3>
+                        <p class="resource-meta">By Guigen Zhang • 3rd Edition</p>
+                        <p class="resource-description">Comprehensive guide to tissue engineering, covering scaffold design, stem cell biology, bioreactors, and regenerative medicine applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Tissue Engineering</span>
+                            <span class="resource-tag">Regenerative Medicine</span>
+                        </div>
+                        <a href="#" onclick="openModal('book10-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book11.jpg" alt="Biomechanics of the Human Body">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biomechanics of the Human Body</h3>
+                        <p class="resource-meta">By Emico Okuno • 2nd Edition</p>
+                        <p class="resource-description">Detailed analysis of human biomechanics, covering musculoskeletal modeling, gait analysis, and orthopedic implant design.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Biomechanics</span>
+                            <span class="resource-tag">Orthopedics</span>
+                        </div>
+                        <a href="#" onclick="openModal('book11-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book12.jpg" alt="Biosensors and Bioelectronics">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biosensors and Bioelectronics</h3>
+                        <p class="resource-meta">By Ping Wang • 4th Edition</p>
+                        <p class="resource-description">Advanced concepts in biosensor technology, including electrochemical sensors, optical biosensors, and wearable health monitoring devices.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Biosensors</span>
+                            <span class="resource-tag">Electronics</span>
+                        </div>
+                        <a href="#" onclick="openModal('book12-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4 class="footer-heading">About GoBioEng</h4>
+                    <p class="footer-text">
+                        Empowering biomedical engineers with cutting-edge resources, tools, and insights to advance healthcare technology and improve patient outcomes.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="books.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="videos.html">Educational Videos</a></li>
+                        <li class="footer-link"><a href="courses.html">Online Courses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Detail Modals -->
+    <div id="book1-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book1-details')">&times;</button>
+            <h2>Fundamentals of Biomedical Engineering</h2>
+            <p><strong>Author:</strong> John Doe</p>
+            <p><strong>Edition:</strong> 3rd Edition (2024)</p>
+            <p><strong>Publisher:</strong> Academic Press</p>
+            <p><strong>ISBN:</strong> 978-1234567890</p>
+            <p><strong>Description:</strong> A comprehensive guide to the principles and applications of biomedical engineering. This textbook covers everything from basic concepts to advanced topics, including biomaterials, biomechanics, medical imaging, biosensors, and tissue engineering. Suitable for undergraduate and graduate students in biomedical engineering programs.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book1-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book2-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book2-details')">&times;</button>
+            <h2>Neural Engineering Handbook</h2>
+            <p><strong>Author:</strong> Jane Smith</p>
+            <p><strong>Edition:</strong> 2nd Edition (2023)</p>
+            <p><strong>Publisher:</strong> MIT Press</p>
+            <p><strong>ISBN:</strong> 978-0987654321</p>
+            <p><strong>Description:</strong> In-depth exploration of neural engineering, covering brain-computer interfaces, neural prosthetics, neurostimulation systems, and the latest advances in neural signal processing. This handbook is essential for researchers and practitioners in neural engineering and neurotechnology.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book2-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book3-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book3-details')">&times;</button>
+            <h2>Medical Imaging Systems</h2>
+            <p><strong>Author:</strong> Robert Johnson</p>
+            <p><strong>Edition:</strong> 4th Edition (2024)</p>
+            <p><strong>Publisher:</strong> Elsevier</p>
+            <p><strong>ISBN:</strong> 978-1122334455</p>
+            <p><strong>Description:</strong> Comprehensive overview of modern medical imaging technologies including MRI, CT, ultrasound, nuclear medicine, and their clinical applications. Covers physics principles, system design, image reconstruction, and quality assurance procedures.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book3-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book4-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book4-details')">&times;</button>
+            <h2>Physics of Radiation Therapy</h2>
+            <p><strong>Author:</strong> Faiz Khan</p>
+            <p><strong>Edition:</strong> 6th Edition (2024)</p>
+            <p><strong>Publisher:</strong> Lippincott Williams & Wilkins</p>
+            <p><strong>ISBN:</strong> 978-1496346780</p>
+            <p><strong>Description:</strong> The definitive textbook on radiation therapy physics, covering dosimetry, treatment planning, quality assurance procedures, and the latest advances in radiotherapy technology. Essential reading for medical physicists and radiation oncologists.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book4-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book5-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book5-details')">&times;</button>
+            <h2>Linear Accelerators for Radiation Therapy</h2>
+            <p><strong>Author:</strong> David Greene & Peter Williams</p>
+            <p><strong>Edition:</strong> 3rd Edition (2023)</p>
+            <p><strong>Publisher:</strong> Taylor & Francis</p>
+            <p><strong>ISBN:</strong> 978-1138033320</p>
+            <p><strong>Description:</strong> Comprehensive guide to linear accelerator technology, beam production, and modern radiotherapy techniques including IMRT, VMAT, and stereotactic treatments. Covers engineering principles, safety systems, and quality assurance.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book5-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book6-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book6-details')">&times;</button>
+            <h2>Stereotactic Radiosurgery and Radiotherapy</h2>
+            <p><strong>Author:</strong> Lawrence Marks</p>
+            <p><strong>Edition:</strong> 1st Edition (2023)</p>
+            <p><strong>Publisher:</strong> Springer</p>
+            <p><strong>ISBN:</strong> 978-3030123456</p>
+            <p><strong>Description:</strong> Advanced techniques in stereotactic radiosurgery, including Gamma Knife, CyberKnife, and LINAC-based SRS systems. Covers treatment planning, quality assurance, and clinical applications for brain and body stereotactic treatments.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book6-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book7-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book7-details')">&times;</button>
+            <h2>Machine Learning in Medicine</h2>
+            <p><strong>Author:</strong> Ton Weiss & Paul Natarajan</p>
+            <p><strong>Edition:</strong> 2nd Edition (2024)</p>
+            <p><strong>Publisher:</strong> Academic Press</p>
+            <p><strong>ISBN:</strong> 978-0123456789</p>
+            <p><strong>Description:</strong> Practical guide to applying machine learning algorithms in healthcare, including medical imaging, clinical decision support, predictive analytics, and natural language processing for medical records.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book7-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book8-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book8-details')">&times;</button>
+            <h2>Deep Learning for Medical Image Analysis</h2>
+            <p><strong>Author:</strong> Gustavo Carneiro et al.</p>
+            <p><strong>Edition:</strong> 1st Edition (2024)</p>
+            <p><strong>Publisher:</strong> Academic Press</p>
+            <p><strong>ISBN:</strong> 978-0128156782</p>
+            <p><strong>Description:</strong> Comprehensive coverage of deep learning applications in medical imaging, including CNNs, GANs, and advanced neural architectures for image segmentation, classification, and synthesis.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book8-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book9-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book9-details')">&times;</button>
+            <h2>Artificial Intelligence in Drug Discovery</h2>
+            <p><strong>Author:</strong> Nathan Brown</p>
+            <p><strong>Edition:</strong> 1st Edition (2024)</p>
+            <p><strong>Publisher:</strong> Royal Society of Chemistry</p>
+            <p><strong>ISBN:</strong> 978-1788017763</p>
+            <p><strong>Description:</strong> Explore how AI is revolutionizing pharmaceutical research, from molecular design to clinical trial optimization and personalized medicine. Covers machine learning algorithms, molecular modeling, and drug-target interactions.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book9-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book10-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book10-details')">&times;</button>
+            <h2>Tissue Engineering: Principles and Practices</h2>
+            <p><strong>Author:</strong> Guigen Zhang</p>
+            <p><strong>Edition:</strong> 3rd Edition (2024)</p>
+            <p><strong>Publisher:</strong> CRC Press</p>
+            <p><strong>ISBN:</strong> 978-1138476189</p>
+            <p><strong>Description:</strong> Comprehensive guide to tissue engineering, covering scaffold design, stem cell biology, bioreactors, and regenerative medicine applications. Includes the latest advances in 3D bioprinting and organoid technology.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book10-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book11-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book11-details')">&times;</button>
+            <h2>Biomechanics of the Human Body</h2>
+            <p><strong>Author:</strong> Emico Okuno</p>
+            <p><strong>Edition:</strong> 2nd Edition (2023)</p>
+            <p><strong>Publisher:</strong> Springer</p>
+            <p><strong>ISBN:</strong> 978-3030789456</p>
+            <p><strong>Description:</strong> Detailed analysis of human biomechanics, covering musculoskeletal modeling, gait analysis, orthopedic implant design, and computational methods for biomechanical simulation.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book11-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book12-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book12-details')">&times;</button>
+            <h2>Biosensors and Bioelectronics</h2>
+            <p><strong>Author:</strong> Ping Wang</p>
+            <p><strong>Edition:</strong> 4th Edition (2024)</p>
+            <p><strong>Publisher:</strong> Elsevier</p>
+            <p><strong>ISBN:</strong> 978-0128234567</p>
+            <p><strong>Description:</strong> Advanced concepts in biosensor technology, including electrochemical sensors, optical biosensors, wearable health monitoring devices, and point-of-care diagnostic systems.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book12-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
