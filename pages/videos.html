@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational videos for biomedical engineering, radiotherapy, and AI in medical engineering - GoBioEng">
+    <title>Educational Videos - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="support.html" class="nav-link">Support</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <a href="resources.html">Resources</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Educational Videos</span>
+                </div>
+                <h1 class="page-hero-title">Educational Videos</h1>
+                <p class="page-hero-subtitle">Watch expert-led videos on biomedical engineering, radiotherapy, AI in healthcare, and medical technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Filter -->
+    <section style="background-color: var(--white); padding: 2rem 0;">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="resources.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">All Resources</a>
+                <a href="books.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Books</a>
+                <a href="courses.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Courses</a>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Software</button>
+                <button class="btn" style="background-color: var(--primary); color: white;">Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biomedical Engineering Videos -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Biomedical Engineering Fundamentals</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video1.jpg" alt="Introduction to Biomedical Engineering">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Introduction to Biomedical Engineering</h3>
+                        <p class="resource-meta">MIT OpenCourseWare • 45 minutes</p>
+                        <p class="resource-description">Comprehensive overview of biomedical engineering principles, applications, and career opportunities in the field.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Fundamentals</span>
+                            <span class="resource-tag">Free</span>
+                        </div>
+                        <a href="#" onclick="openModal('video1-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video2.jpg" alt="Biomaterials and Tissue Engineering">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biomaterials and Tissue Engineering</h3>
+                        <p class="resource-meta">Stanford University • 1 hour 15 minutes</p>
+                        <p class="resource-description">Explore advanced biomaterials used in medical implants and tissue engineering applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Biomaterials</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" onclick="openModal('video2-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video3.jpg" alt="Medical Device Design Process">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Device Design Process</h3>
+                        <p class="resource-meta">Johns Hopkins • 30 minutes</p>
+                        <p class="resource-description">Learn the systematic approach to designing safe and effective medical devices from concept to market.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Design</span>
+                            <span class="resource-tag">Regulatory</span>
+                        </div>
+                        <a href="#" onclick="openModal('video3-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radiotherapy Engineering Videos -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Radiotherapy Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video4.jpg" alt="Linear Accelerator Physics">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Linear Accelerator Physics</h3>
+                        <p class="resource-meta">Medical Physics Academy • 55 minutes</p>
+                        <p class="resource-description">Deep dive into the physics principles behind linear accelerators used in radiation therapy.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">LINAC</span>
+                            <span class="resource-tag">Physics</span>
+                        </div>
+                        <a href="#" onclick="openModal('video4-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video5.jpg" alt="Treatment Planning Systems">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Treatment Planning Systems</h3>
+                        <p class="resource-meta">ESTRO Education • 40 minutes</p>
+                        <p class="resource-description">Learn how modern treatment planning systems optimize radiation dose delivery for cancer treatment.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Treatment Planning</span>
+                            <span class="resource-tag">Clinical</span>
+                        </div>
+                        <a href="#" onclick="openModal('video5-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video6.jpg" alt="Image-Guided Radiotherapy">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Image-Guided Radiotherapy (IGRT)</h3>
+                        <p class="resource-meta">AAPM Education • 35 minutes</p>
+                        <p class="resource-description">Explore advanced imaging techniques used to improve precision in radiation therapy delivery.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">IGRT</span>
+                            <span class="resource-tag">Imaging</span>
+                        </div>
+                        <a href="#" onclick="openModal('video6-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI in Medical Engineering Videos -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">AI in Medical Engineering</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video7.jpg" alt="Machine Learning in Medical Imaging">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Machine Learning in Medical Imaging</h3>
+                        <p class="resource-meta">Google AI • 50 minutes</p>
+                        <p class="resource-description">Discover how machine learning algorithms are revolutionizing medical image analysis and diagnosis.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Medical Imaging</span>
+                        </div>
+                        <a href="#" onclick="openModal('video7-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video8.jpg" alt="AI in Drug Discovery">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">AI in Drug Discovery</h3>
+                        <p class="resource-meta">DeepMind • 45 minutes</p>
+                        <p class="resource-description">Learn how artificial intelligence is accelerating the drug discovery process and reducing development costs.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">AI</span>
+                            <span class="resource-tag">Drug Discovery</span>
+                        </div>
+                        <a href="#" onclick="openModal('video8-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video9.jpg" alt="Neural Interfaces and Brain-Computer Interfaces">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Neural Interfaces and Brain-Computer Interfaces</h3>
+                        <p class="resource-meta">Neuralink • 1 hour</p>
+                        <p class="resource-description">Explore the cutting-edge technology enabling direct communication between the brain and computers.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Neural Interface</span>
+                            <span class="resource-tag">BCI</span>
+                        </div>
+                        <a href="#" onclick="openModal('video9-details')" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4 class="footer-heading">About GoBioEng</h4>
+                    <p class="footer-text">
+                        Empowering biomedical engineers with cutting-edge resources, tools, and insights to advance healthcare technology and improve patient outcomes.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="books.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="videos.html">Educational Videos</a></li>
+                        <li class="footer-link"><a href="courses.html">Online Courses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modals -->
+    <div id="video1-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video1-details')">&times;</button>
+            <h2>Introduction to Biomedical Engineering</h2>
+            <p><strong>Presenter:</strong> MIT OpenCourseWare</p>
+            <p><strong>Duration:</strong> 45 minutes</p>
+            <p><strong>Description:</strong> This comprehensive introduction covers the fundamental principles of biomedical engineering, including the intersection of engineering principles with biological systems. Topics include biomechanics, biomaterials, medical device design, and career pathways in the field.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video1-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video2-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video2-details')">&times;</button>
+            <h2>Biomaterials and Tissue Engineering</h2>
+            <p><strong>Presenter:</strong> Stanford University</p>
+            <p><strong>Duration:</strong> 1 hour 15 minutes</p>
+            <p><strong>Description:</strong> Explore the latest advances in biomaterials science and tissue engineering. Learn about biocompatibility, scaffold design, stem cell technology, and regenerative medicine applications.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video2-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video3-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video3-details')">&times;</button>
+            <h2>Medical Device Design Process</h2>
+            <p><strong>Presenter:</strong> Johns Hopkins University</p>
+            <p><strong>Duration:</strong> 30 minutes</p>
+            <p><strong>Description:</strong> Learn the systematic approach to medical device development, including regulatory requirements, design controls, risk management, and clinical validation processes.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video3-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video4-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video4-details')">&times;</button>
+            <h2>Linear Accelerator Physics</h2>
+            <p><strong>Presenter:</strong> Medical Physics Academy</p>
+            <p><strong>Duration:</strong> 55 minutes</p>
+            <p><strong>Description:</strong> Comprehensive overview of linear accelerator technology, including beam production, dose delivery, safety systems, and quality assurance procedures in radiotherapy.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video4-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video5-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video5-details')">&times;</button>
+            <h2>Treatment Planning Systems</h2>
+            <p><strong>Presenter:</strong> ESTRO Education</p>
+            <p><strong>Duration:</strong> 40 minutes</p>
+            <p><strong>Description:</strong> Learn about modern treatment planning systems, dose calculation algorithms, IMRT/VMAT planning, and optimization techniques for radiation therapy.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video5-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video6-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video6-details')">&times;</button>
+            <h2>Image-Guided Radiotherapy (IGRT)</h2>
+            <p><strong>Presenter:</strong> AAPM Education</p>
+            <p><strong>Duration:</strong> 35 minutes</p>
+            <p><strong>Description:</strong> Explore advanced imaging techniques including CBCT, MRI-guided RT, and real-time tracking systems that improve precision in radiation therapy delivery.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video6-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video7-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video7-details')">&times;</button>
+            <h2>Machine Learning in Medical Imaging</h2>
+            <p><strong>Presenter:</strong> Google AI</p>
+            <p><strong>Duration:</strong> 50 minutes</p>
+            <p><strong>Description:</strong> Discover how deep learning and computer vision are transforming medical imaging, including automated diagnosis, image enhancement, and predictive analytics.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video7-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video8-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video8-details')">&times;</button>
+            <h2>AI in Drug Discovery</h2>
+            <p><strong>Presenter:</strong> DeepMind</p>
+            <p><strong>Duration:</strong> 45 minutes</p>
+            <p><strong>Description:</strong> Learn how artificial intelligence is revolutionizing pharmaceutical research, including protein folding prediction, drug-target interaction, and clinical trial optimization.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video8-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="video9-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('video9-details')">&times;</button>
+            <h2>Neural Interfaces and Brain-Computer Interfaces</h2>
+            <p><strong>Presenter:</strong> Neuralink</p>
+            <p><strong>Duration:</strong> 1 hour</p>
+            <p><strong>Description:</strong> Explore cutting-edge brain-computer interface technology, neural signal processing, and applications in treating neurological disorders and enhancing human capabilities.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Watch on YouTube</a>
+                <button onclick="closeModal('video9-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
