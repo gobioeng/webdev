@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore learning resources and books for biomedical engineering - GoBioEng">
+    <title>Learning Resources - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link active">RESOURCES</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link active">Resources</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
+            <i class="fas fa-moon"></i> Toggle Theme
+        </a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Learning Resources</span>
+                </div>
+                <h1 class="page-hero-title">Learning Resources</h1>
+                <p class="page-hero-subtitle">Discover essential books, courses, and educational materials for biomedical engineers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Filter -->
+    <section style="background-color: var(--white); padding: 2rem 0;">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <button class="btn" style="background-color: var(--primary); color: white;">All Resources</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Books</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Courses</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Software</button>
+                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Recommended Books</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book1.jpg" alt="Fundamentals of Biomedical Engineering">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Fundamentals of Biomedical Engineering</h3>
+                        <p class="resource-meta">By John Doe • 3rd Edition</p>
+                        <p class="resource-description">A comprehensive guide to the principles and applications of biomedical engineering.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Textbook</span>
+                            <span class="resource-tag">Fundamentals</span>
+                        </div>
+                        <a href="#" onclick="openModal('book1-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book2.jpg" alt="Neural Engineering Handbook">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Neural Engineering Handbook</h3>
+                        <p class="resource-meta">By Jane Smith • 2nd Edition</p>
+                        <p class="resource-description">In-depth look at neural engineering, covering topics such as brain-computer interfaces and neural prosthetics.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Neural</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" onclick="openModal('book2-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/book3.jpg" alt="Medical Imaging Systems">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Imaging Systems</h3>
+                        <p class="resource-meta">By Robert Johnson • 4th Edition</p>
+                        <p class="resource-description">Comprehensive overview of modern medical imaging technologies and their clinical applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Imaging</span>
+                            <span class="resource-tag">Clinical</span>
+                        </div>
+                        <a href="#" onclick="openModal('book3-details')" class="article-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Courses -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Online Courses</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course1.jpg" alt="Introduction to Radiotherapy Physics">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Introduction to Radiotherapy Physics</h3>
+                        <p class="resource-meta">By Medical Physics Academy • 8 weeks</p>
+                        <p class="resource-description">Learn the fundamental physics principles behind modern radiotherapy treatments.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Radiotherapy</span>
+                            <span class="resource-tag">Physics</span>
+                        </div>
+                        <a href="#" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course2.jpg" alt="Biomedical Signal Processing">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biomedical Signal Processing</h3>
+                        <p class="resource-meta">By MIT OpenCourseWare • Self-paced</p>
+                        <p class="resource-description">Master the techniques for processing and analyzing biological signals like ECG, EEG, and EMG.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Signal Processing</span>
+                            <span class="resource-tag">Free</span>
+                        </div>
+                        <a href="#" class="article-link">View Course</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/course3.jpg" alt="Medical Device Design">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Device Design</h3>
+                        <p class="resource-meta">By Stanford Online • 10 weeks</p>
+                        <p class="resource-description">Learn the process of designing safe and effective medical devices from concept to market.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Design</span>
+                            <span class="resource-tag">Regulatory</span>
+                        </div>
+                        <a href="#" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Resources -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Software Tools</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/halog-dashboard.jpg" alt="HALog">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">HALog <span class="beta-badge">BETA</span></h3>
+                        <p class="resource-meta">By GoBioEng • Free</p>
+                        <p class="resource-description">Desktop application for monitoring and analyzing water cooling systems in linear accelerators (LINACs).</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Radiotherapy</span>
+                            <span class="resource-tag">Monitoring</span>
+                        </div>
+                        <a href="halog.html" class="article-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/software1.jpg" alt="BioSignal Analyzer">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">BioSignal Analyzer</h3>
+                        <p class="resource-meta">By BioTech Solutions • Open Source</p>
+                        <p class="resource-description">Open-source software for analyzing and visualizing biological signals from various medical devices.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Signal Processing</span>
+                            <span class="resource-tag">Open Source</span>
+                        </div>
+                        <a href="#" class="article-link">View Software</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/software2.jpg" alt="MedCAD">
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">MedCAD</h3>
+                        <p class="resource-meta">By HealthTech • Educational License</p>
+                        <p class="resource-description">Specialized CAD software for designing medical devices and implants with biocompatible materials.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Design</span>
+                            <span class="resource-tag">Education</span>
+                        </div>
+                        <a href="#" class="article-link">View Software</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Book Details -->
+    <div id="book1-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book1-details')">&times;</button>
+            <h2>Fundamentals of Biomedical Engineering</h2>
+            <p><strong>Author:</strong> John Doe</p>
+            <p><strong>Edition:</strong> 3rd Edition (2024)</p>
+            <p><strong>Publisher:</strong> Academic Press</p>
+            <p><strong>ISBN:</strong> 978-1234567890</p>
+            <p><strong>Description:</strong> A comprehensive guide to the principles and applications of biomedical engineering. This textbook covers everything from basic concepts to advanced topics, including biomaterials, biomechanics, medical imaging, biosensors, and tissue engineering. Suitable for undergraduate and graduate students in biomedical engineering programs.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book1-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book2-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book2-details')">&times;</button>
+            <h2>Neural Engineering Handbook</h2>
+            <p><strong>Author:</strong> Jane Smith</p>
+            <p><strong>Edition:</strong> 2nd Edition (2023)</p>
+            <p><strong>Publisher:</strong> Technical Press</p>
+            <p><strong>ISBN:</strong> 978-0987654321</p>
+            <p><strong>Description:</strong> This handbook provides an in-depth look at neural engineering, covering topics such as brain-computer interfaces, neural prosthetics, neuromodulation, and computational neuroscience. It's an essential resource for researchers, engineers, and clinicians working in the field of neural engineering and neuroprosthetics.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book2-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book3-details" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('book3-details')">&times;</button>
+            <h2>Medical Imaging Systems</h2>
+            <p><strong>Author:</strong> Robert Johnson</p>
+            <p><strong>Edition:</strong> 4th Edition (2022)</p>
+            <p><strong>Publisher:</strong> Medical Press</p>
+            <p><strong>ISBN:</strong> 978-5678901234</p>
+            <p><strong>Description:</strong> A comprehensive overview of modern medical imaging technologies and their clinical applications, including X-ray, CT, MRI, ultrasound, and nuclear medicine imaging systems. The book covers both the physical principles and the engineering aspects of medical imaging, making it suitable for biomedical engineers, medical physicists, and radiologists.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#" class="btn btn-primary">Buy on Amazon</a>
+                <button onclick="closeModal('book3-details')" class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Get Resource Updates</h2>
+                <p class="cta-description">
+                    Subscribe to our newsletter to be notified when we add new resources.
+                </p>
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Your email address" required 
+                               style="flex-grow: 1; padding: 0.75rem; border-radius: var(--border-radius); border: none;">
+                        <button type="submit" class="btn btn-primary" style="background-color: white; color: var(--primary);">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                            <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                        </svg>
+                        GOBIOENG
+                    </a>
+                    <p class="footer-about">
+                        Providing professional tools and educational resources for the biomedical engineering community.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="resources.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="articles/radiotherapy-engineering-career.html">Radiotherapy Careers</a></li>
+                        <li class="footer-link"><a href="articles.html">Industry Insights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

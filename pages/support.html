@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support GoBioEng - Provide feedback on HALog Beta and help us improve our resources">
+    <title>Support & Feedback - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="support.html" class="nav-link active">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="support.html" class="nav-link active">Support</a>
+        <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
+            <i class="fas fa-moon"></i> Toggle Theme
+        </a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Support</span>
+                </div>
+                <h1 class="page-hero-title">Support & Feedback</h1>
+                <p class="page-hero-subtitle">Get help with GoBioEng resources and help us improve HALog Beta</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALog Beta Feedback Section -->
+    <section id="feedback" class="features" style="padding-top: 4rem;">
+        <div class="container">
+            <h2 class="section-title">HALog Beta Feedback</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="info-box" style="background-color: rgba(0, 168, 142, 0.1); border-left: 4px solid var(--secondary);">
+                    <h3><i class="fas fa-flask"></i> Help Shape HALog's Development</h3>
+                    <p>HALog is currently in beta, and your feedback is crucial for its improvement. Whether you've encountered bugs, have feature suggestions, or general usability comments, we'd love to hear from you.</p>
+                </div>
+
+                <div class="support-options">
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3 class="support-title">Report a Bug</h3>
+                        <p class="support-description">Found something not working as expected in HALog? Let us know the details so we can fix it promptly.</p>
+                    </div>
+
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="support-title">Feature Request</h3>
+                        <p class="support-description">Have an idea for improving HALog? We're eager to hear your suggestions for new features or enhancements.</p>
+                    </div>
+
+                    <div class="support-option">
+                        <div class="support-icon">
+                            <i class="fas fa-comment-alt"></i>
+                        </div>
+                        <h3 class="support-title">General Feedback</h3>
+                        <p class="support-description">Share your overall experience with HALog Beta or any other thoughts about our resources.</p>
+                    </div>
+                </div>
+
+                <!-- Feedback Form -->
+                <div class="form-container" style="margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1.5rem;">Submit Your Feedback</h3>
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackType" class="form-label">Feedback Type</label>
+                            <select id="feedbackType" name="feedbackType" class="form-input" required>
+                                <option value="">Select a feedback type...</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="general">General Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Feedback</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="files" class="form-label">Attach Screenshots (optional)</label>
+                            <input type="file" id="files" name="files" class="form-input" multiple accept="image/*">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Support Options -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Other Support Options</h2>
+            <div class="support-options">
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="support-title">GitHub Issues</h3>
+                    <p class="support-description">For technical issues or feature requests, you can create an issue in our GitHub repository.</p>
+                    <a href="https://github.com/gobioeng/halog" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Visit Repository
+                    </a>
+                </div>
+
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="support-title">Email Support</h3>
+                    <p class="support-description">For private inquiries or detailed discussions, reach out to our support team via email.</p>
+                    <a href="mailto:support@gobioeng.com" class="btn btn-primary">
+                        Email Support
+                    </a>
+                </div>
+
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="support-title">Documentation</h3>
+                    <p class="support-description">Access user guides and documentation for HALog and other resources.</p>
+                    <a href="#" class="btn btn-primary">
+                        View Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section id="donate" class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">Support GoBioEng</h2>
+            <p style="text-align: center; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Your contributions help us maintain and develop free educational resources and tools for the biomedical engineering community.
+            </p>
+            
+            <div class="support-options">
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3 class="support-title">Donate via PayPal</h3>
+                    <p class="support-description">Make a one-time or recurring donation through PayPal's secure platform.</p>
+                    <a href="https://www.paypal.com/donate?hosted_button_id=DUMMY_PAYPAL_ID" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Donate Now
+                    </a>
+                </div>
+
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fab fa-patreon"></i>
+                    </div>
+                    <h3 class="support-title">Support on Patreon</h3>
+                    <p class="support-description">Become a patron and get access to exclusive content and early access to new tools.</p>
+                    <a href="https://www.patreon.com/DUMMY_PATREON_LINK" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Join Our Patreon
+                    </a>
+                </div>
+
+                <div class="support-option">
+                    <div class="support-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="support-title">Contribute Code</h3>
+                    <p class="support-description">Help improve our open-source projects by contributing code, documentation, or testing.</p>
+                    <a href="https://github.com/gobioeng" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        GitHub Organization
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-box" style="max-width: 800px; margin: 3rem auto 0;">
+                <h3><i class="fas fa-heart"></i> Thank You for Your Support</h3>
+                <p>Your donations and contributions make it possible for us to develop tools like HALog and provide educational resources to the biomedical engineering community. We're grateful for your support and commitment to advancing the field.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="form-container" style="margin-top: 2rem;">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName" class="form-label">Name</label>
+                        <input type="text" id="contactName" name="contactName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactSubject" class="form-label">Subject</label>
+                        <input type="text" id="contactSubject" name="contactSubject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage" class="form-label">Message</label>
+                        <textarea id="contactMessage" name="contactMessage" class="form-textarea" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../index.html" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                            <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                        </svg>
+                        GOBIOENG
+                    </a>
+                    <p class="footer-about">
+                        Providing professional tools and educational resources for the biomedical engineering community.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="resources.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="articles/radiotherapy-engineering-career.html">Radiotherapy Careers</a></li>
+                        <li class="footer-link"><a href="articles.html">Industry Insights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Form submission handlers
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your feedback! We\'ll review it and get back to you if needed.');
+            this.reset();
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
