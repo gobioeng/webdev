@@ -73,17 +73,15 @@
     <section style="background-color: var(--white); padding: 2rem 0;">
         <div class="container">
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                <button class="btn" style="background-color: var(--primary); color: white;">All Resources</button>
-                <a href="books.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Books</a>
-                <a href="courses.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Courses</a>
-                <button class="btn" style="background-color: var(--gray-200); color: var(--text-primary);">Software</button>
-                <a href="videos.html" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Videos</a>
+                <a href="#books" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Books</a>
+                <a href="#courses" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Courses</a>
+                <a href="#videos" class="btn" style="background-color: var(--gray-200); color: var(--text-primary); text-decoration: none;">Videos</a>
             </div>
         </div>
     </section>
 
     <!-- Featured Resources -->
-    <section class="resources-section">
+    <section id="books" class="resources-section">
         <div class="container">
             <h2 class="section-title">Recommended Books</h2>
             <div class="resources-grid">
@@ -139,7 +137,7 @@
     </section>
 
     <!-- Online Courses -->
-    <section class="resources-section" style="background-color: var(--gray-100);">
+    <section id="courses" class="resources-section" style="background-color: var(--gray-100);">
         <div class="container">
             <h2 class="section-title">Online Courses</h2>
             <div class="resources-grid">
@@ -188,6 +186,71 @@
                             <span class="resource-tag">Regulatory</span>
                         </div>
                         <a href="#" class="article-link">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Videos -->
+    <section id="videos" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Educational Videos</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video1.jpg" alt="Introduction to Biomedical Engineering">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Introduction to Biomedical Engineering</h3>
+                        <p class="resource-meta">MIT OpenCourseWare • 45 minutes</p>
+                        <p class="resource-description">Comprehensive overview of biomedical engineering principles, applications, and career opportunities in the field.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Fundamentals</span>
+                            <span class="resource-tag">Free</span>
+                        </div>
+                        <a href="#" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video2.jpg" alt="Biomaterials and Tissue Engineering">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Biomaterials and Tissue Engineering</h3>
+                        <p class="resource-meta">Stanford University • 1 hour 15 minutes</p>
+                        <p class="resource-description">Explore advanced biomaterials used in medical implants and tissue engineering applications.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Biomaterials</span>
+                            <span class="resource-tag">Advanced</span>
+                        </div>
+                        <a href="#" class="article-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="../assets/images/video3.jpg" alt="Medical Device Design Process">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-play" style="color: white; font-size: 1.5rem; margin-left: 4px;"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Medical Device Design Process</h3>
+                        <p class="resource-meta">Johns Hopkins • 30 minutes</p>
+                        <p class="resource-description">Learn the systematic approach to designing safe and effective medical devices from concept to market.</p>
+                        <div class="resource-tags">
+                            <span class="resource-tag">Design</span>
+                            <span class="resource-tag">Regulatory</span>
+                        </div>
+                        <a href="#" class="article-link">Watch Video</a>
                     </div>
                 </div>
             </div>
