@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
     <header>
         <div class="container">
@@ -61,7 +64,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu">
+    <nav id="mobileMenu" aria-label="Mobile navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="pages/halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
         <a href="pages/articles.html" class="nav-link">Articles</a>
@@ -70,7 +73,10 @@
         <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
             <i class="fas fa-moon"></i> Toggle Theme
         </a>
-    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Hero Section - Expanded Full Width -->
     <section class="hero">
@@ -290,6 +296,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>

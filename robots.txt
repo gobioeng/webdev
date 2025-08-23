@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+Disallow: /.git/
+
+# Sitemap
+Sitemap: https://gobioeng.com/sitemap.xml
+
+# SEO friendly crawling
+Crawl-delay: 1
