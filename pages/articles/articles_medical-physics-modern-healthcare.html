@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the vital role of medical physics in modern healthcare, from radiation therapy and diagnostic imaging to emerging technologies and future trends.">
+    <title>Medical Physics in Modern Healthcare - GoBioEng</title>
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../../index.html" class="nav-link">HOME</a>
+                    <a href="../halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="../articles.html" class="nav-link active">ARTICLES</a>
+                    <a href="../resources.html" class="nav-link">RESOURCES</a>
+                    <a href="../support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="../articles.html" class="nav-link active">Articles</a>
+        <a href="../resources.html" class="nav-link">Resources</a>
+        <a href="../support.html" class="nav-link">Support</a>
+        <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
+            <i class="fas fa-moon"></i> Toggle Theme
+        </a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <a href="../articles.html">Articles</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Medical Physics</span>
+                </div>
+                <h1 class="page-hero-title">Medical Physics in Modern Healthcare</h1>
+                <p class="page-hero-subtitle">The Science Behind Cutting-Edge Diagnosis and Treatment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="resources-section">
+        <div class="container">
+            <article class="article-full">
+                <div class="article-with-sidebar">
+                    <div class="article-main-content">
+                        <div class="article-header-info">
+                            <div class="article-header-meta">
+                                <div class="article-author">
+                                    <img src="../../assets/images/team-gobioeng.png" alt="Team GoBioEng" class="author-avatar">
+                                    <div>
+                                        <strong>Team GoBioEng</strong>
+                                        <div>GoBioEng Editorial Team</div>
+                                    </div>
+                                </div>
+                                <div class="article-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>August 23, 2025</span>
+                                </div>
+                                <div class="article-read-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>15 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="article-body">
+                            <p><strong>Medical physics sits at the intersection of physics, engineering, and healthcare. It's a field that applies the principles and methods of physics to prevent, diagnose, and treat human diseases, playing a crucial role in modern medicine. From the X-rays that detect fractures to the radiation beams that target cancer cells, medical physicists work behind the scenes to save lives.</strong></p>
+
+                            <!-- Key Stats Box -->
+                            <div style="background-color: #f0f8ff; padding: 1.5rem; border-radius: var(--border-radius); margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0;">Medical Physics: Key Facts</h3>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                    <div>
+                                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Global Impact</p>
+                                        <ul style="margin-top: 0;">
+                                            <li>Over <strong>27,000</strong> medical physicists worldwide</li>
+                                            <li><strong>50+</strong> countries with professional certification programs</li>
+                                            <li>Medical physicists support <strong>40%</strong> of all cancer treatment procedures</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p style="font-weight: 600; margin-bottom: 0.25rem;">Education Requirements</p>
+                                        <ul style="margin-top: 0;">
+                                            <li>Typically requires a <strong>Master's or PhD</strong> in Medical Physics or related field</li>
+                                            <li>Average of <strong>7-9 years</strong> of higher education</li>
+                                            <li><strong>2-3 years</strong> of clinical training/residency for clinical roles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 1rem; margin-bottom: 0; font-style: italic;">Sources: International Organization for Medical Physics (IOMP), American Association of Physicists in Medicine (AAPM)</p>
+                            </div>
+                            
+                            <h2>What Do Medical Physicists Do?</h2>
+                            
+                            <p>Medical physicists are healthcare professionals who specialize in the application of the concepts and methods of physics to the diagnosis and treatment of human disease. Their work spans several key areas:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-radiation" style="color: var(--secondary);"></i> Radiation Therapy Physics</h4>
+                                    <p>Ensuring cancer treatments using ionizing radiation are safe, accurate, and effective. This includes planning treatments, calibrating equipment, developing quality assurance programs, and researching new treatment techniques.</p>
+                                </div>
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-x-ray" style="color: var(--secondary);"></i> Diagnostic and Interventional Imaging Physics</h4>
+                                    <p>Developing and optimizing imaging techniques such as X-ray, CT, MRI, ultrasound, and nuclear medicine. Medical physicists ensure these technologies produce high-quality images while minimizing radiation exposure to patients.</p>
+                                </div>
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-shield-alt" style="color: var(--secondary);"></i> Radiation Safety</h4>
+                                    <p>Designing and implementing radiation protection programs to ensure the safety of patients, healthcare workers, and the public. This includes monitoring radiation levels, designing shielding, and establishing safety protocols.</p>
+                                </div>
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-laptop-medical" style="color: var(--secondary);"></i> Nuclear Medicine Physics</h4>
+                                    <p>Working with radiopharmaceuticals for diagnostic imaging and targeted therapies. Medical physicists calibrate equipment, develop imaging protocols, and ensure accurate dosimetry in this specialized field.</p>
+                                </div>
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-search" style="color: var(--secondary);"></i> Research and Development</h4>
+                                    <p>Creating new medical technologies and treatment approaches by applying physics principles to solve clinical problems. Many medical physicists work in academic settings or industry to advance the field.</p>
+                                </div>
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary); display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-user-graduate" style="color: var(--secondary);"></i> Education and Training</h4>
+                                    <p>Teaching physics principles to medical students, residents, and other healthcare professionals. Many medical physicists hold faculty positions at universities and teaching hospitals.</p>
+                                </div>
+                            </div>
+
+                            <h2>The Daily Impact of Medical Physics</h2>
+                            
+                            <p>Though often working behind the scenes, medical physicists make critical contributions to patient care. Here's how their work affects healthcare on a daily basis:</p>
+
+                            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0; align-items: center;">
+                                <div style="flex: 1; min-width: 280px;">
+                                    <img src="../../assets/images/medical-physics-treatment.jpg" alt="Medical physicist planning radiation treatment" style="width: 100%; height: auto; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                                </div>
+                                <div style="flex: 1.5; min-width: 280px;">
+                                    <h3>Cancer Treatment</h3>
+                                    <p>For a patient receiving radiation therapy, medical physicists work with radiation oncologists to:</p>
+                                    <ul>
+                                        <li>Create personalized treatment plans using advanced computing systems</li>
+                                        <li>Calculate precise radiation doses to target tumors while sparing healthy tissue</li>
+                                        <li>Calibrate linear accelerators and other treatment machines daily</li>
+                                        <li>Verify treatment accuracy through quality assurance measurements</li>
+                                        <li>Develop new techniques for more precise tumor targeting</li>
+                                    </ul>
+                                    <p>These contributions directly impact treatment outcomes and patient safety. In modern radiotherapy, sub-millimeter precision is essential, and medical physicists make this possible.</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0; align-items: center; flex-direction: row-reverse;">
+                                <div style="flex: 1; min-width: 280px;">
+                                    <img src="../../assets/images/diagnostic-imaging-physics.jpg" alt="Medical physicist calibrating MRI equipment" style="width: 100%; height: auto; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+                                </div>
+                                <div style="flex: 1.5; min-width: 280px;">
+                                    <h3>Diagnostic Imaging</h3>
+                                    <p>When you get an X-ray, CT scan, or MRI, medical physicists have worked to:</p>
+                                    <ul>
+                                        <li>Optimize imaging protocols to provide clear images with minimal radiation</li>
+                                        <li>Test and calibrate imaging equipment regularly</li>
+                                        <li>Implement quality control programs to ensure consistent image quality</li>
+                                        <li>Train technologists on best practices for image acquisition</li>
+                                        <li>Troubleshoot complex technical issues that may arise</li>
+                                    </ul>
+                                    <p>Medical physicists ensure that diagnostic procedures provide accurate information to clinicians while keeping radiation doses "As Low As Reasonably Achievable" (ALARA).</p>
+                                </div>
+                            </div>
+
+                            <h3>Translating Physics into Clinical Solutions</h3>
+                            <p>Medical physicists serve as translators between the worlds of physics and medicine. They convert complex physical principles into practical clinical solutions. For example:</p>
+                            <ul>
+                                <li>Converting mathematical models of radiation interaction into patient-specific treatment plans</li>
+                                <li>Applying principles of nuclear physics to develop new radiotracers for disease detection</li>
+                                <li>Using fluid dynamics to improve blood flow imaging techniques</li>
+                                <li>Implementing machine learning algorithms to enhance image quality and diagnostic accuracy</li>
+                            </ul>
+
+                            <div style="background-color: #f5f5f5; padding: 1.5rem; border-radius: var(--border-radius); margin: 2rem 0; border-left: 4px solid #00a88e;">
+                                <h3 style="margin-top: 0;">FLASH Radiotherapy: A Revolution in Cancer Treatment</h3>
+                                <p>One of the most exciting recent developments in medical physics is FLASH radiotherapy, which delivers radiation at ultra-high dose rates (>40 Gy/s) - more than 100 times faster than conventional radiotherapy. Research indicates that this technique may significantly reduce side effects while maintaining or improving treatment efficacy.</p>
+                                <p>Medical physicists are at the forefront of developing and implementing this technology, which could transform cancer treatment in the coming years. This illustrates how physics innovations directly translate to improved patient care.</p>
+                                <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 0;">Learn more: <a href="https://www.nature.com/articles/s41571-019-0279-2" target="_blank">FLASH irradiation: Rapid particle therapy with ultra-high dose rates</a></p>
+                            </div>
+
+                            <h2>Historical Contributions to Medical Physics</h2>
+                            
+                            <p>Medical physics has been shaped by many notable scientists whose discoveries and innovations revolutionized healthcare. Here are some historical highlights from famous figures in the field:</p>
+
+                            <div style="margin: 2rem 0;">
+                                <!-- Historical Quotes Section -->
+                                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+                                    <div style="flex: 1; min-width: 280px; background: var(--white); border-radius: var(--border-radius); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                                        <blockquote style="font-style: italic; margin: 0 0 1rem 0; padding: 0; border-left: none;">
+                                            <p>"I am among those who think that science has great beauty. A scientist in his laboratory is not only a technician: he is also a child placed before natural phenomena which impress him like a fairy tale."</p>
+                                        </blockquote>
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600;">Marie Curie (1867-1934)</p>
+                                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pioneering researcher on radioactivity, discovered radium and polonium</p>
+                                        </div>
+                                    </div>
+                                    <div style="flex: 1; min-width: 280px; background: var(--white); border-radius: var(--border-radius); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                                        <blockquote style="font-style: italic; margin: 0 0 1rem 0; padding: 0; border-left: none;">
+                                            <p>"I have not failed. I've just found 10,000 ways that won't work. Many of life's failures are people who did not realize how close they were to success when they gave up."</p>
+                                        </blockquote>
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600;">Thomas Edison (1847-1931)</p>
+                                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Developed early X-ray technology following Röntgen's discovery</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                                    <div style="flex: 1; min-width: 280px; background: var(--white); border-radius: var(--border-radius); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                                        <blockquote style="font-style: italic; margin: 0 0 1rem 0; padding: 0; border-left: none;">
+                                            <p>"The discovery of the X-rays will prove to be a blessing to humanity. I am deeply thankful that God deemed me worthy to make this discovery."</p>
+                                        </blockquote>
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600;">Wilhelm Conrad Röntgen (1845-1923)</p>
+                                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Discovered X-rays in 1895, awarded first Nobel Prize in Physics</p>
+                                        </div>
+                                    </div>
+                                    <div style="flex: 1; min-width: 280px; background: var(--white); border-radius: var(--border-radius); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                                        <blockquote style="font-style: italic; margin: 0 0 1rem 0; padding: 0; border-left: none;">
+                                            <p>"You cannot hope to build a better world without improving the individuals. To that end, each of us must work for his own improvement and, at the same time, share a general responsibility for all humanity."</p>
+                                        </blockquote>
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600;">Rolf Maximilian Sievert (1896-1966)</p>
+                                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Pioneer in radiation protection, namesake of the SI unit for dose equivalent (sievert)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>Pioneers and Innovators in Medical Physics</h2>
+                            
+                            <p>Medical physics has a rich history of innovators whose work has revolutionized healthcare. Here are some key figures whose contributions have shaped the field:</p>
+
+                            <div style="border: 1px solid var(--gray-300); border-radius: var(--border-radius); margin: 2rem 0; overflow: hidden;">
+                                <div style="background: var(--primary); color: white; padding: 1rem; border-top-left-radius: var(--border-radius); border-top-right-radius: var(--border-radius);">
+                                    <h3 style="margin: 0; color: white; text-align: center;">Pioneers in Medical Physics</h3>
+                                </div>
+                                <div style="overflow-x: auto;">
+                                    <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+                                        <thead>
+                                            <tr style="background-color: var(--gray-200);">
+                                                <th style="padding: 1rem; border-bottom: 1px solid var(--gray-300); width: 20%;">Pioneer</th>
+                                                <th style="padding: 1rem; border-bottom: 1px solid var(--gray-300); width: 15%;">Country/Era</th>
+                                                <th style="padding: 1rem; border-bottom: 1px solid var(--gray-300); width: 25%;">Key Contributions</th>
+                                                <th style="padding: 1rem; border-bottom: 1px solid var(--gray-300); width: 40%;">Impact on Modern Healthcare</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);"><strong>Wilhelm Röntgen</strong></td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Germany, 1895</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Discovered X-rays; produced the first radiograph</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Revolutionized medical diagnosis; enabled non-invasive visualization of internal structures; foundation for all modern medical imaging</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);"><strong>Marie Curie</strong></td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">France/Poland, Early 1900s</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Discovered radium and polonium; pioneered research on radioactivity; developed mobile X-ray units</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Laid groundwork for radiation therapy; established principles for handling radioactive materials; improved battlefield medicine during WWI</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);"><strong>Rolf Maximilian Sievert</strong></td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Sweden, 1920s-50s</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Developed methods for measuring radiation dose; established radiation protection principles</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Created framework for radiation safety; namesake of the SI unit for radiation dose equivalent (Sievert); modern radiation protection protocols</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);"><strong>Godfrey Hounsfield</strong></td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">United Kingdom, 1970s</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Invented computed tomography (CT) scanning</td>
+                                                <td style="padding: 1rem; border-bottom: 1px solid var(--gray-300);">Transformed diagnostic imaging; enabled 3D visualization of internal structures; essential for modern diagnosis and treatment planning</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 1rem;"><strong>Raymond Damadian</strong></td>
+                                                <td style="padding: 1rem;">United States, 1970s</td>
+                                                <td style="padding: 1rem;">Pioneered magnetic resonance imaging (MRI); built the first full-body MRI scanner</td>
+                                                <td style="padding: 1rem;">Created non-radiation based imaging; revolutionized soft tissue visualization; enabled accurate diagnosis of neurological and musculoskeletal conditions</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <p>These pioneers laid the foundation for modern medical physics, but innovation continues at a rapid pace. Today's medical physicists build on this legacy while applying new technologies like artificial intelligence, advanced computing, and novel materials to solve healthcare challenges.</p>
+
+                            <h2>Regional Approaches to Medical Physics</h2>
+                            
+                            <p>Medical physics practices and emphasis vary around the world, reflecting regional healthcare priorities, resources, and regulatory frameworks:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary);">Japan and East Asia</h4>
+                                    <p>Known for pioneering work in motion management for radiotherapy, addressing the region's higher rates of lung and liver cancers. Strong focus on miniaturization of technology and precise engineering. Japan's contributions to charged particle therapy have been particularly significant, with more than 20 proton and carbon ion facilities.</p>
+                                </div>
+                                
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary);">United Kingdom and Europe</h4>
+                                    <p>Leadership in MR-guided radiotherapy and integration of imaging with treatment. European medical physicists often work within public healthcare systems, emphasizing standardization and evidence-based adoption of new technologies. The UK has pioneered the development of MR-Linacs, changing how radiotherapy is delivered.</p>
+                                </div>
+                                
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary);">Brazil and Latin America</h4>
+                                    <p>Focus on maximizing the lifespan and performance of existing equipment through innovative quality assurance and calibration approaches. Medical physicists in this region often develop creative solutions to extend the service life of technology while maintaining safety standards, helping provide care to underserved populations.</p>
+                                </div>
+                                
+                                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                                    <h4 style="color: var(--primary);">United States and North America</h4>
+                                    <p>Leading integration of artificial intelligence into medical physics workflow. North American institutions have been at the forefront of AI applications in treatment planning automation, quality assurance, and imaging optimization. The region has the highest concentration of medical physicists per capita globally.</p>
+                                </div>
+                            </div>
+
+                            <p>These regional differences highlight how medical physics adapts to local needs while maintaining global standards of safety and quality. International collaboration through organizations like the International Organization for Medical Physics (IOMP) helps share innovations across borders.</p>
+
+                            <h2>Current Trends and Future Directions</h2>
+                            
+                            <p>Medical physics is a rapidly evolving field. Here are some of the most significant current trends and future directions:</p>
+
+                            <div style="margin: 2rem 0;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                                    <!-- AI and Machine Learning -->
+                                    <div style="background: linear-gradient(135deg, #0053b3, #00a88e); color: white; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                                        <div style="padding: 1.5rem; position: relative; z-index: 2;">
+                                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <h3 style="color: white; margin-top: 0;">AI and Machine Learning</h3>
+                                            <p style="margin-bottom: 0;">Artificial intelligence is revolutionizing medical physics through:</p>
+                                            <ul>
+                                                <li>Automated treatment planning</li>
+                                                <li>Intelligent image reconstruction</li>
+                                                <li>Predictive quality assurance</li>
+                                                <li>Real-time treatment adaptation</li>
+                                                <li>Image segmentation and target delineation</li>
+                                            </ul>
+                                            <p style="margin-bottom: 0;">These technologies are improving efficiency, accuracy, and personalization of medical physics applications.</p>
+                                        </div>
+                                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(50%, -50%);"></div>
+                                        <div style="position: absolute; bottom: 0; left: 0; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(-50%, 50%);"></div>
+                                    </div>
+                                    
+                                    <!-- Personalized Medicine -->
+                                    <div style="background: linear-gradient(135deg, #0053b3, #00a88e); color: white; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                                        <div style="padding: 1.5rem; position: relative; z-index: 2;">
+                                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+                                                <i class="fas fa-dna"></i>
+                                            </div>
+                                            <h3 style="color: white; margin-top: 0;">Personalized Medicine</h3>
+                                            <p style="margin-bottom: 0;">Medical physicists are developing approaches for treatment individualization:</p>
+                                            <ul>
+                                                <li>Radiogenomics (linking genetic information with radiation response)</li>
+                                                <li>Biologically-guided adaptive therapy</li>
+                                                <li>Patient-specific dosimetry models</li>
+                                                <li>Functional imaging for treatment response monitoring</li>
+                                                <li>Multi-modal imaging for improved tumor characterization</li>
+                                            </ul>
+                                            <p style="margin-bottom: 0;">These advances are moving treatment from a one-size-fits-all approach to truly personalized care.</p>
+                                        </div>
+                                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(50%, -50%);"></div>
+                                        <div style="position: absolute; bottom: 0; left: 0; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(-50%, 50%);"></div>
+                                    </div>
+                                </div>
+
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                                    <!-- Novel Treatment Modalities -->
+                                    <div style="background: linear-gradient(135deg, #0053b3, #00a88e); color: white; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                                        <div style="padding: 1.5rem; position: relative; z-index: 2;">
+                                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+                                                <i class="fas fa-atom"></i>
+                                            </div>
+                                            <h3 style="color: white; margin-top: 0;">Novel Treatment Modalities</h3>
+                                            <p style="margin-bottom: 0;">Beyond conventional radiotherapy, medical physicists are developing:</p>
+                                            <ul>
+                                                <li>FLASH radiotherapy (ultra-high dose rate treatments)</li>
+                                                <li>Spatially fractionated radiotherapy</li>
+                                                <li>Minibeam radiation therapy</li>
+                                                <li>Boron neutron capture therapy</li>
+                                                <li>Advanced particle therapies (carbon ions, etc.)</li>
+                                            </ul>
+                                            <p style="margin-bottom: 0;">These approaches aim to improve the therapeutic ratio by either enhancing tumor control or reducing normal tissue toxicity.</p>
+                                        </div>
+                                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(50%, -50%);"></div>
+                                        <div style="position: absolute; bottom: 0; left: 0; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(-50%, 50%);"></div>
+                                    </div>
+                                    
+                                    <!-- Global Access -->
+                                    <div style="background: linear-gradient(135deg, #0053b3, #00a88e); color: white; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                                        <div style="padding: 1.5rem; position: relative; z-index: 2;">
+                                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+                                                <i class="fas fa-globe"></i>
+                                            </div>
+                                            <h3 style="color: white; margin-top: 0;">Global Access and Sustainability</h3>
+                                            <p style="margin-bottom: 0;">Addressing healthcare disparities through:</p>
+                                            <ul>
+                                                <li>Simplified, robust treatment techniques for low-resource settings</li>
+                                                <li>Remote quality assurance and monitoring systems</li>
+                                                <li>Training programs for developing countries</li>
+                                                <li>Low-cost imaging and treatment technologies</li>
+                                                <li>Telemedicine applications for physics support</li>
+                                            </ul>
+                                            <p style="margin-bottom: 0;">The global medical physics community is working to ensure these vital services reach patients worldwide.</p>
+                                        </div>
+                                        <div style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(50%, -50%);"></div>
+                                        <div style="position: absolute; bottom: 0; left: 0; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(-50%, 50%);"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>Becoming a Medical Physicist</h2>
+                            
+                            <p>Medical physics offers rewarding career opportunities for those interested in applying physics to healthcare. The path typically includes:</p>
+
+                            <div style="background-color: #fff9e6; padding: 2rem; border-radius: var(--border-radius); margin: 2rem 0; border-left: 4px solid #ffcc00;">
+                                <h3 style="margin-top: 0;">Educational and Training Pathway</h3>
+                                
+                                <div style="margin: 1.5rem 0;">
+                                    <h4 style="margin-top: 0; color: var(--primary);">1. Undergraduate Education</h4>
+                                    <p style="margin-bottom: 0;">Bachelor's degree in physics, engineering physics, or related field (mathematics, engineering with strong physics component)</p>
+                                </div>
+                                
+                                <div style="margin: 1.5rem 0;">
+                                    <h4 style="margin-top: 0; color: var(--primary);">2. Graduate Education</h4>
+                                    <p style="margin-bottom: 0;">Master's or Ph.D. in Medical Physics or closely related field from an accredited program. Programs typically include coursework in:</p>
+                                    <ul style="margin-bottom: 0;">
+                                        <li>Radiation physics and dosimetry</li>
+                                        <li>Radiation biology</li>
+                                        <li>Medical imaging physics</li>
+                                        <li>Radiation therapy physics</li>
+                                        <li>Radiation protection</li>
+                                        <li>Anatomy and physiology</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="margin: 1.5rem 0;">
+                                    <h4 style="margin-top: 0; color: var(--primary);">3. Clinical Training</h4>
+                                    <p style="margin-bottom: 0;">For clinical roles, a residency program (typically 2 years) providing supervised practical experience in a clinical setting is required in many countries.</p>
+                                </div>
+                                
+                                <div style="margin: 1.5rem 0;">
+                                    <h4 style="margin-top: 0; color: var(--primary);">4. Certification</h4>
+                                    <p style="margin-bottom: 0;">Professional certification through organizations such as:</p>
+                                    <ul style="margin-bottom: 0;">
+                                        <li>American Board of Radiology (ABR) in the United States</li>
+                                        <li>European Federation of Organizations for Medical Physics (EFOMP) in Europe</li>
+                                        <li>Australasian College of Physical Scientists and Engineers in Medicine (ACPSEM) in Australia/New Zealand</li>
+                                        <li>Canadian College of Physicists in Medicine (CCPM) in Canada</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h4 style="margin-top: 0; color: var(--primary);">5. Continuing Education</h4>
+                                    <p style="margin-bottom: 0;">Ongoing professional development to stay current with rapidly advancing technology and methods</p>
+                                </div>
+                            </div>
+
+                            <h3>Key Skills and Attributes</h3>
+                            <p>Successful medical physicists typically possess:</p>
+                            <ul>
+                                <li>Strong analytical and problem-solving abilities</li>
+                                <li>Excellent mathematical skills</li>
+                                <li>Attention to detail and precision</li>
+                                <li>Good communication skills to collaborate with healthcare professionals</li>
+                                <li>Ability to explain complex technical concepts to non-physicists</li>
+                                <li>Adaptability to keep pace with rapidly evolving technology</li>
+                                <li>Interest in both physics and healthcare</li>
+                            </ul>
+
+                            <div style="background: linear-gradient(120deg, var(--primary), var(--secondary)); color: white; padding: 2rem; border-radius: var(--border-radius); margin: 2rem 0; text-align: center;">
+                                <h3 style="color: white; margin-top: 0;">Join the Field of Medical Physics</h3>
+                                <p style="margin-bottom: 1.5rem;">Medical physics offers the opportunity to apply physics knowledge to improve healthcare and save lives. Explore educational programs and professional organizations to learn more.</p>
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://www.aapm.org/students/" target="_blank" class="btn" style="background-color: white; color: var(--primary);">
+                                        <i class="fas fa-graduation-cap"></i> AAPM Student Resources
+                                    </a>
+                                    <a href="https://www.campep.org/campeplstgrad.asp" target="_blank" class="btn" style="background-color: white; color: var(--primary);">
+                                        <i class="fas fa-university"></i> Accredited Programs
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h2>Conclusion</h2>
+                            <p>Medical physics stands at the intersection of physics, engineering, and medicine, making vital contributions to modern healthcare. From diagnostic imaging to cancer treatment, medical physicists work behind the scenes to ensure that cutting-edge technologies are safe, effective, and optimally used.</p>
+                            
+                            <p>As healthcare continues to advance, the role of medical physicists will only grow in importance. The integration of artificial intelligence, personalized medicine approaches, and novel treatment technologies will rely heavily on the expertise of these professionals who bridge the gap between physical science and clinical care.</p>
+                            
+                            <p>The global community of medical physicists continues to collaborate, innovate, and educate, working toward a future where advanced physics applications improve healthcare outcomes and accessibility worldwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-sidebar">
+                        <!-- About the authors -->
+                        <div style="margin-bottom: 2rem; background: var(--gray-100); padding: 1.5rem; border-radius: var(--border-radius);">
+                            <h3 style="margin-top: 0;">About the Authors</h3>
+                            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                <img src="../../assets/images/team-gobioeng.png" alt="Team GoBioEng" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 1rem;">
+                                <div>
+                                    <strong style="display: block;">Team GoBioEng</strong>
+                                    <span style="color: var(--text-secondary); font-size: 0.9rem;">GoBioEng Editorial Team</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;">This article was developed through extensive research of published literature and publicly available information to provide a comprehensive overview of the field of medical physics.</p>
+                        </div>
+
+                        <!-- Quick Navigation -->
+                        <div style="margin-bottom: 2rem; background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                            <h3 style="margin-top: 0;">Quick Navigation</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="#what-do-medical-physicists-do" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Role of Medical Physicists
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="#the-daily-impact-of-medical-physics" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Daily Impact
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="#historical-contributions-to-medical-physics" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Historical Contributions
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="#pioneers-and-innovators-in-medical-physics" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Pioneers
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="#current-trends-and-future-directions" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Future Directions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#becoming-a-medical-physicist" style="color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-angle-right"></i> Career Path
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Takeaways -->
+                        <div style="margin-bottom: 2rem; background: var(--gray-100); padding: 1.5rem; border-radius: var(--border-radius);">
+                            <h3 style="margin-top: 0;">Key Takeaways</h3>
+                            <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.5rem;">Medical physicists apply physics principles to diagnose and treat disease</li>
+                                <li style="margin-bottom: 0.5rem;">They ensure safety and accuracy in radiation therapy and diagnostic imaging</li>
+                                <li style="margin-bottom: 0.5rem;">The field combines technical expertise with direct healthcare impact</li>
+                                <li style="margin-bottom: 0.5rem;">AI and personalized medicine are rapidly changing the field</li>
+                                <li>Career typically requires advanced degree and specialized training</li>
+                            </ul>
+                        </div>
+
+                        <!-- Facts and Figures -->
+                        <div style="margin-bottom: 2rem; background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
+                            <h3 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-pie" style="color: var(--secondary);"></i> Facts and Figures</h3>
+                            <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+                                <li style="margin-bottom: 0.5rem;">50-60% of cancer patients receive radiotherapy during treatment</li>
+                                <li style="margin-bottom: 0.5rem;">Medical physicists ensure accuracy within 1-2 millimeters for treatment delivery</li>
+                                <li style="margin-bottom: 0.5rem;">10-15 years of education and training typically required</li>
+                                <li style="margin-bottom: 0.5rem;">Radiation doses in CT scanning have decreased by ~50% in the past decade due to physics innovations</li>
+                                <li>Projected 7% growth in medical physics jobs through 2029</li>
+                            </ul>
+                        </div>
+
+                        <!-- Useful Resources -->
+                        <div style="margin-bottom: 2rem;">
+                            <h3>Useful Resources</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="https://www.aapm.org/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none;">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>American Association of Physicists in Medicine</span>
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="https://www.efomp.org/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none;">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>European Federation of Organizations for Medical Physics</span>
+                                    </a>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <a href="https://www.iomp.org/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none;">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>International Organization for Medical Physics</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- HALog Promo -->
+                        <div style="margin-bottom: 2rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: var(--border-radius); padding: 1.5rem; color: white;">
+                            <h3 style="margin-top: 0; color: white;">HALog for Radiotherapy Centers</h3>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">Our HALog tool helps monitor LINAC water cooling systems - developed with input from medical physicists and radiotherapy engineers.</p>
+                            <a href="../halog.html" style="display: inline-block; background: white; color: var(--primary); padding: 0.5rem 1rem; border-radius: var(--border-radius); text-decoration: none; font-weight: 500;">Learn More</a>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div>
+                            <h3>Related Articles</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <a href="radiotherapy-engineering-career.html" style="text-decoration: none; color: inherit;">
+                                    <div style="display: flex; gap: 0.75rem; align-items: center;">
+                                        <img src="../../assets/images/radiotherapy-engineering.jpg" alt="Radiotherapy Engineering" style="width: 70px; height: 70px; object-fit: cover; border-radius: var(--border-radius);">
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600; color: var(--text-primary);">Exploring a Career in Radiotherapy Engineering</p>
+                                            <span style="font-size: 0.8rem; color: var(--text-secondary);">August 23, 2025</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="nhs-careers-biomedical-engineering.html" style="text-decoration: none; color: inherit;">
+                                    <div style="display: flex; gap: 0.75rem; align-items: center;">
+                                        <img src="../../assets/images/eng-job-rt.jpg" alt="NHS Careers" style="width: 70px; height: 70px; object-fit: cover; border-radius: var(--border-radius);">
+                                        <div>
+                                            <p style="margin: 0; font-weight: 600; color: var(--text-primary);">Radiotherapy Engineering Careers in the NHS</p>
+                                            <span style="font-size: 0.8rem; color: var(--text-secondary);">August 23, 2025</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Share Article -->
+                        <div style="margin-top: 2rem;">
+                            <h3>Share This Article</h3>
+                            <div class="social-links" style="margin-bottom: 1.5rem;">
+                                <a href="#" class="social-link" style="background-color: #1DA1F2;" aria-label="Share on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" style="background-color: #4267B2;" aria-label="Share on Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" style="background-color: #0e76a8;" aria-label="Share on LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" style="background-color: #25D366;" aria-label="Share on WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="resources-section" style="background-color: var(--gray-100);">
+        <div class="container">
+            <h2 class="section-title">More on Biomedical Engineering</h2>
+            <div class="resources-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../../assets/images/radiotherapy-engineering.jpg" alt="Radiotherapy Engineering" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Exploring a Career in Radiotherapy Engineering</h3>
+                        <div class="article-meta">August 23, 2025 | By Tanmay Pandey</div>
+                        <p class="article-excerpt">
+                            Discover the field of radiotherapy engineering, including roles, responsibilities, and the technical foundations of the profession.
+                        </p>
+                        <a href="radiotherapy-engineering-career.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../../assets/images/eng-job-rt.jpg" alt="NHS Careers" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Radiotherapy Engineering Careers in the NHS</h3>
+                        <div class="article-meta">August 23, 2025 | By Tanmay Pandey</div>
+                        <p class="article-excerpt">
+                            Learn about specific career pathways for radiotherapy engineers in the National Health Service, including pay scales and training opportunities.
+                        </p>
+                        <a href="nhs-careers-biomedical-engineering.html" class="article-link">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="../../assets/images/halog-dashboard.jpg" alt="HALog Dashboard" />
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Introducing HALog: Professional LINAC Water System Monitor</h3>
+                        <div class="article-meta">August 20, 2025 | By GoBioEng Team</div>
+                        <p class="article-excerpt">
+                            Discover our professional desktop application designed for monitoring and analyzing water system parameters in Linear Accelerator (LINAC) machines.
+                        </p>
+                        <a href="../halog.html" class="article-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Stay Updated on Medical Physics</h2>
+                <p class="cta-description">
+                    Subscribe to our newsletter for the latest developments in medical physics, healthcare technology, and biomedical engineering.
+                </p>
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Your email address" required 
+                               style="flex-grow: 1; padding: 0.75rem; border-radius: var(--border-radius); border: none;">
+                        <button type="submit" class="btn btn-primary" style="background-color: white; color: var(--primary);">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="../../index.html" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                            <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                        </svg>
+                        GOBIOENG
+                    </a>
+                    <p class="footer-about">
+                        Providing professional tools and educational resources for the biomedical engineering community.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="../resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="../articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../resources.html">Biomedical Books</a></li>
+                        <li class="footer-
