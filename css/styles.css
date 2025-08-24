@@ -203,7 +203,7 @@ img[loading="lazy"].loaded {
 
 /* Header */
 header {
-    background-color: #009cb3b3;
+    background-color: #00b3a9b0;
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
