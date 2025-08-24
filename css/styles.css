@@ -733,7 +733,7 @@ header.scrolled {
     width: 80%;
     height: auto;
     display: block;
-    align-items: center
+    align-items: center;
 }
 
 .product-content {
