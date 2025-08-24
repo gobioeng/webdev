@@ -6,7 +6,7 @@
     --secondary-hover: #008f79;
     --accent: #ff6b6b;
     --text-primary: #2d3748;
-    --text-secondary: #4a5568;
+    --text-secondary: #4a5568; /* copied from styles.css */
     --text-muted: #718096;
     --gray-50: #f9fafb;
     --gray-100: #f7fafc;
@@ -397,6 +397,7 @@ header.scrolled {
     padding: 5.5rem 0 4rem;
     position: relative;
     overflow: hidden;
+    --text-secondary: rgba(255,255,255,0.9); /* local whitish override */
 }
 
 .page-hero-pattern {
@@ -1001,62 +1002,62 @@ footer {
     height: 100%;
 }
 
-resource-card:hover {
+.resource-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-resource-image {
+.resource-image {
     height: 230px;
     overflow: hidden;
 }
 
-resource-image img {
+.resource-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-resource-card:hover .resource-image img {
+.resource-card:hover .resource-image img {
     transform: scale(1.05);
 }
 
-resource-content {
+.resource-content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-resource-title {
+.resource-title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
     color: var(--text-primary);
 }
 
-resource-meta {
+.resource-meta {
     font-size: 0.875rem;
     color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
-resource-description {
+.resource-description {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     flex-grow: 1;
     line-height: 1.6;
 }
 
-resource-tags {
+.resource-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-resource-tag {
+.resource-tag {
     background-color: var(--gray-200);
     color: var(--text-secondary);
     font-size: 0.75rem;
@@ -1082,12 +1083,12 @@ resource-tag {
     height: 100%;
 }
 
-support-option:hover {
+.support-option:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-support-icon {
+.support-icon {
     width: 80px;
     height: 80px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -1100,14 +1101,14 @@ support-icon {
     font-size: 2rem;
 }
 
-support-title {
+.support-title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
-support-description {
+.support-description {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.6;
