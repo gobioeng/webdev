@@ -730,7 +730,8 @@ header.scrolled {
 }
 
 .product-image img {
-    width: 100%;
+    width: 95%;
+    margin: 5% auto;
     height: auto;
     display: block;
     align-items: center
