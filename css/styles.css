@@ -203,7 +203,7 @@ img[loading="lazy"].loaded {
 
 /* Header */
 header {
-    background-color: #00b3a9b0;
+    background-color: #009cb3b3;
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
@@ -367,7 +367,7 @@ header.scrolled {
 }
 
 .hero-subtitle {
-    color: white;
+    font-color: white;
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
@@ -733,7 +733,7 @@ header.scrolled {
     width: 80%;
     height: auto;
     display: block;
-    align-items: center;
+    align-items: center
 }
 
 .product-content {
