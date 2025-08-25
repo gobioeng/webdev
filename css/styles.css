@@ -203,7 +203,7 @@ img[loading="lazy"].loaded {
 
 /* Header */
 header {
-    background-color: #009cb3b3;
+    background-color: #0052b32e;
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
@@ -367,7 +367,7 @@ header.scrolled {
 }
 
 .hero-subtitle {
-    font-color: white;
+    color: white;
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
@@ -730,7 +730,7 @@ header.scrolled {
 }
 
 .product-image img {
-    width: 80%;
+    width: 100%;
     height: auto;
     display: block;
     align-items: center
@@ -885,6 +885,7 @@ header.scrolled {
 }
 
 .cta-description {
+    color: white;
     font-size: 1.2rem;
     opacity: 0.9;
     margin-bottom: 2rem;
