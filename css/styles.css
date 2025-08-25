@@ -1976,3 +1976,67 @@ select:focus {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+/* === Layout Patch: Consolidated mobile fixes & removal of inline-style conflicts === */
+
+/* Featured Content two-up grid (replaces inline style) */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+/* Ensure generic images never overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improved Mobile Grid & Card Responsiveness */
+@media (max-width: 768px) {
+    /* Force single-column on narrow screens (overrides any inline styles) */
+    .features-grid,
+    .featured-grid,
+    .product-container,
+    .articles-grid,
+    .resources-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    /* Make cards stretch to container and wrap long content safely */
+    .feature-card,
+    .product-container,
+    .article-card,
+    .resource-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* Tighten page gutter slightly on mobile */
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    /* Extra safety for hero after removing inline widths */
+    .hero-content {
+        max-width: 100% !important;
+    }
+    .hero-image {
+        width: 90% !important;
+        right: 0 !important;
+    }
+}
+
+/* Prevent card/content overflow on all sizes */
+.feature-card,
+.product-container,
+.article-card,
+.resource-card {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
