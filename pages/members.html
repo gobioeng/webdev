@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our GoBioEng community members - biomedical engineers, medical physicists, and healthcare technology professionals">
+    <meta name="keywords" content="GoBioEng members, biomedical engineering community, medical physics professionals, healthcare technology">
+    <meta name="author" content="GoBioEng">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Members - GoBioEng">
+    <meta property="og:description" content="Meet the biomedical engineering professionals in our community">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gobioeng.com/pages/members.html">
+    
+    <title>Our Members - GoBioEng</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 2.04.76 4.02 2.14 5.54l3.54-3.54a2 2 0 0 1 2.83 0l3.54 3.54A8 8 0 0 0 12 2z"/>
+                        <path d="M12 22a8 8 0 0 0 8-8c0-2.04-.76-4.02-2.14-5.54l-3.54 3.54a2 2 0 0 1-2.83 0L8 8.46A8 8 0 0 0 12 22z"/>
+                    </svg>
+                    GOBIOENG
+                </a>
+
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">HOME</a>
+                    <a href="halog.html" class="nav-link">HALOG<span class="beta-badge">BETA</span></a>
+                    <a href="articles.html" class="nav-link">ARTICLES</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
+                    <a href="members.html" class="nav-link active">MEMBERS</a>
+                    <a href="support.html" class="nav-link">SUPPORT</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="halog.html" class="nav-link">HALog<span class="beta-badge">Beta</span></a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="members.html" class="nav-link active">Members</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="#" onclick="toggleDarkMode(); return false;" class="nav-link">
+            <i class="fas fa-moon"></i> Toggle Theme
+        </a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-pattern"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"> / </span>
+                    <span class="current">Members</span>
+                </div>
+                <h1 class="page-hero-title">Our Members</h1>
+                <p class="page-hero-subtitle">Meet the biomedical engineering professionals in our community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="features" style="padding-top: 4rem;">
+        <div class="container">
+            <h2 class="section-title">Community Members</h2>
+            <p class="section-subtitle">Connect with biomedical engineers, medical physicists, and healthcare technology professionals from around the world.</p>
+            
+            <div class="members-grid">
+                <!-- Member Card 1 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/0053b3/ffffff?text=DR" alt="Dr. Sarah Johnson" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Dr. Sarah Johnson</h3>
+                        <p class="member-designation">Senior Medical Physicist</p>
+                        <p class="member-company">Royal Marsden Hospital</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">Radiotherapy</span>
+                            <span class="interest-tag">AI in Healthcare</span>
+                            <span class="interest-tag">Quality Assurance</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member Card 2 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/00a88e/ffffff?text=MK" alt="Michael Kim" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Michael Kim</h3>
+                        <p class="member-designation">Biomedical Engineer</p>
+                        <p class="member-company">Varian Medical Systems</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">LINAC Development</span>
+                            <span class="interest-tag">Software Engineering</span>
+                            <span class="interest-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member Card 3 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/ff6b6b/ffffff?text=EP" alt="Emily Patel" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Emily Patel</h3>
+                        <p class="member-designation">Clinical Engineer</p>
+                        <p class="member-company">Johns Hopkins Hospital</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">Medical Devices</span>
+                            <span class="interest-tag">Patient Safety</span>
+                            <span class="interest-tag">Research</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member Card 4 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/4a5568/ffffff?text=JR" alt="James Rodriguez" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">James Rodriguez</h3>
+                        <p class="member-designation">Medical Physics Resident</p>
+                        <p class="member-company">University of Texas MD Anderson</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">Imaging Physics</span>
+                            <span class="interest-tag">Proton Therapy</span>
+                            <span class="interest-tag">Innovation</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member Card 5 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/a0aec0/ffffff?text=LC" alt="Lisa Chen" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Lisa Chen</h3>
+                        <p class="member-designation">Research Scientist</p>
+                        <p class="member-company">Philips Healthcare</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">MRI Technology</span>
+                            <span class="interest-tag">Image Processing</span>
+                            <span class="interest-tag">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member Card 6 -->
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <img src="https://via.placeholder.com/120x120/718096/ffffff?text=DT" alt="David Thompson" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">David Thompson</h3>
+                        <p class="member-designation">Regulatory Affairs Manager</p>
+                        <p class="member-company">Elekta Ltd</p>
+                        <div class="member-interests">
+                            <span class="interest-tag">FDA Compliance</span>
+                            <span class="interest-tag">Quality Systems</span>
+                            <span class="interest-tag">Risk Management</span>
+                        </div>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join Community CTA -->
+            <div class="join-community">
+                <h3>Join Our Community</h3>
+                <p>Are you a biomedical engineering professional? Connect with us and be part of our growing community.</p>
+                <a href="support.html" class="btn btn-primary">
+                    <i class="fas fa-users"></i> Get Involved
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4 class="footer-heading">About GoBioEng</h4>
+                    <p class="footer-description">Empowering biomedical engineers with professional resources, community connections, and innovative tools like HALog Beta for LINAC water system monitoring.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="halog.html">HALog Beta</a></li>
+                        <li class="footer-link"><a href="resources.html">Learning Resources</a></li>
+                        <li class="footer-link"><a href="articles.html">Articles & News</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="resources.html">Biomedical Books</a></li>
+                        <li class="footer-link"><a href="articles/radiotherapy-engineering-career.html">Radiotherapy Careers</a></li>
+                        <li class="footer-link"><a href="articles.html">Industry Insights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="support.html">Support</a></li>
+                        <li class="footer-link"><a href="mailto:hello@gobioeng.com">hello@gobioeng.com</a></li>
+                        <li class="footer-link"><a href="support.html#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 GoBioEng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
