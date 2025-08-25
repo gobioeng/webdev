@@ -2624,3 +2624,73 @@ img {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+/* --- Compact Member Card Patch for Members Page --- */
+.members-grid {
+    gap: 1.2rem !important;
+}
+
+.member-card {
+    min-height: 240px !important; /* ~40% less than 400px */
+    padding: 1rem !important;
+    font-size: 0.96rem !important;
+}
+
+.member-avatar {
+    width: 70px !important;
+    height: 70px !important;
+    margin-bottom: 0.75rem !important;
+    border-width: 2px !important;
+}
+
+.member-name {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.member-designation {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.15rem !important;
+}
+
+.member-company {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.member-interests {
+    gap: 0.35rem !important;
+    margin-top: 0.5rem !important;
+}
+
+.interest-tag {
+    font-size: 0.68rem !important;
+    padding: 0.15rem 0.45rem !important;
+}
+
+.member-social {
+    gap: 0.6rem !important;
+    margin-top: 0.35rem !important;
+}
+
+.social-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1rem !important;
+}
+
+.member-info {
+    margin-bottom: 0.8rem !important;
+}
+
+@media (max-width: 768px) {
+    .member-card {
+        min-height: 200px !important;
+        padding: 0.7rem !important;
+    }
+    .member-avatar {
+        width: 54px !important;
+        height: 54px !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
