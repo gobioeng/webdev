@@ -131,6 +131,29 @@ function handleScrollAnimations() {
     }
 }
 
+// --- Mobile Nav: Collapse on link click or scroll (for mobile view) ---
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu) {
+        // Collapse menu when any nav link is clicked
+        mobileMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // Only collapse if the menu is open
+                if (window.innerWidth <= 768 && mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Collapse mobile menu on scroll
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768 && mobileMenu && mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        }
+    });
+});
+
 // Set initial theme based on saved preference
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
