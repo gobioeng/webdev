@@ -107,14 +107,21 @@ function handleSmoothScroll() {
 
 // Intersection Observer for animations
 function handleScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.feature-card, .article-card, .resource-card');
+    const animatedElements = document.querySelectorAll('.feature-card, .article-card, .resource-card, .member-card');
     
     if ('IntersectionObserver' in window) {
         const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    // Stagger animation for member cards
+                    if (entry.target.classList.contains('member-card')) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate-in');
+                        }, index * 150); // 150ms delay between each card
+                    } else {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
                 }
             });
         }, {
@@ -123,12 +130,98 @@ function handleScrollAnimations() {
         });
         
         animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            if (!el.classList.contains('member-card')) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            }
             animationObserver.observe(el);
         });
     }
+}
+
+// Member popup functionality
+function openMemberPopup(memberElement) {
+    const memberData = {
+        name: memberElement.querySelector('.member-name').textContent,
+        designation: memberElement.querySelector('.member-designation').textContent,
+        company: memberElement.querySelector('.member-company').textContent,
+        avatar: getImageSrc(memberElement),
+        interests: Array.from(memberElement.querySelectorAll('.interest-tag')).map(tag => tag.textContent),
+        extendedInfo: memberElement.querySelector('.member-extended-info')
+    };
+
+    // Populate popup
+    document.getElementById('popupName').textContent = memberData.name;
+    document.getElementById('popupDesignation').textContent = memberData.designation;
+    document.getElementById('popupCompany').textContent = memberData.company;
+    
+    const popupAvatar = document.getElementById('popupAvatar');
+    if (popupAvatar) {
+        popupAvatar.src = memberData.avatar;
+        popupAvatar.alt = memberData.name;
+    }
+
+    // Extended bio
+    const bioContent = memberData.extendedInfo.querySelector('.extended-bio').innerHTML;
+    document.getElementById('popupBio').innerHTML = bioContent;
+
+    // Hobbies
+    const hobbiesContent = memberData.extendedInfo.querySelector('.extended-hobbies').innerHTML;
+    document.getElementById('popupHobbies').innerHTML = hobbiesContent;
+
+    // Interests
+    const interestsHtml = memberData.interests.map(interest => 
+        `<span class="interest-tag">${interest}</span>`
+    ).join('');
+    document.getElementById('popupInterests').innerHTML = '<h4>Expertise</h4>' + interestsHtml;
+
+    // Social links
+    const basicSocial = memberElement.querySelector('.member-social').innerHTML;
+    const extendedSocial = memberData.extendedInfo.querySelector('.extended-social').innerHTML;
+    document.getElementById('popupBasicSocial').innerHTML = basicSocial;
+    document.getElementById('popupExtendedSocial').innerHTML = extendedSocial;
+
+    // Show popup
+    const popup = document.getElementById('memberPopup');
+    popup.style.display = 'flex';
+    setTimeout(() => {
+        popup.classList.add('show');
+    }, 10);
+    
+    document.body.style.overflow = 'hidden';
+}
+
+function getImageSrc(memberElement) {
+    const img = memberElement.querySelector('.member-avatar img');
+    if (img && img.src) {
+        return img.src;
+    }
+    // Fallback for when image is replaced with placeholder
+    return 'https://via.placeholder.com/120x120/0053b3/ffffff?text=USER';
+}
+
+function closeMemberPopup() {
+    const popup = document.getElementById('memberPopup');
+    popup.classList.remove('show');
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 300);
+    document.body.style.overflow = '';
+}
+
+// Initialize member card click handlers
+function initializeMemberCards() {
+    const memberCards = document.querySelectorAll('.member-card');
+    memberCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Prevent opening popup if clicking on social links
+            if (e.target.closest('.social-icon')) {
+                return;
+            }
+            openMemberPopup(card);
+        });
+    });
 }
 
 // --- Mobile Nav: Collapse on link click or scroll (for mobile view) ---
@@ -172,6 +265,11 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSmoothScroll();
     handleScrollAnimations();
     
+    // Initialize member cards if on members page
+    if (document.querySelector('.members-grid')) {
+        initializeMemberCards();
+    }
+    
     // Add scroll listener for header
     window.addEventListener('scroll', handleHeaderScroll);
 
@@ -212,14 +310,28 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
     
-    // Close modals when clicking outside
-    const modals = document.querySelectorAll('.modal');
+    // Close modals when clicking outside or pressing escape
+    const modals = document.querySelectorAll('.modal, .member-popup-overlay');
     modals.forEach(modal => {
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
+                if (modal.classList.contains('member-popup-overlay')) {
+                    closeMemberPopup();
+                } else {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
             }
         });
+    });
+
+    // Close popup on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const memberPopup = document.getElementById('memberPopup');
+            if (memberPopup && memberPopup.style.display === 'flex') {
+                closeMemberPopup();
+            }
+        }
     });
 });
