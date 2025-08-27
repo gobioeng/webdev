@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HALog Generated Plots - Visual Verification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0078d4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .plot-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .plot-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .plot-description {
+            margin-bottom: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .features {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        .features h3 {
+            margin-top: 0;
+            color: #0078d4;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gobioeng HALog 0.0.1 beta - Generated Analysis Plots</h1>
+        
+        <div class="plot-section">
+            <div class="plot-title">Sample Data Analysis Plot</div>
+            <div class="plot-description">
+                This plot demonstrates the HALog application's data visualization capabilities using generated sample data. 
+                It shows 100 hours of simulated LINAC water system data with proper min/max/average trend analysis.
+            </div>
+            <img src="../test_output/test_plot.png" alt="HALog Sample Data Analysis Plot">
+        </div>
+        
+        <div class="plot-section">
+            <div class="plot-title">Real LINAC Log File Analysis</div>
+            <div class="plot-description">
+                This plot shows analysis of a real LINAC log file format, demonstrating the application's ability to parse 
+                and visualize actual log data with timestamp-based pump pressure measurements over 24 hours.
+            </div>
+            <img src="../test_output/real_data_plot.png" alt="HALog Real Data Analysis Plot">
+        </div>
+        
+        <div class="plot-section">
+            <div class="plot-title">CLI-Generated Analysis Plot</div>
+            <div class="plot-description">
+                This plot was generated using the command-line interface mode, showing the same data processing 
+                capabilities available through the CLI for automated analysis workflows.
+            </div>
+            <img src="../test_data/sample_linac_analysis.png" alt="HALog CLI Analysis Plot">
+        </div>
+        
+        <div class="features">
+            <h3>Implementation Features Demonstrated</h3>
+            <ul class="feature-list">
+                <li><strong>Graph Visibility Fixed</strong>: All plots render correctly with proper matplotlib integration</li>
+                <li><strong>Plot Design</strong>: Blue solid line for averages, red/green dotted lines for min/max</li>
+                <li><strong>Professional Styling</strong>: Clean titles, proper legends, grid lines, and color coding</li>
+                <li><strong>Multiple Data Sources</strong>: Sample data, real log files, and CLI processing</li>
+                <li><strong>Trend Analysis</strong>: Clear visualization of parameter variations over time</li>
+                <li><strong>Reset Functionality</strong>: Graphs can be cleared and data reloaded</li>
+                <li><strong>Windows 11 Style</strong>: Professional appearance suitable for clinical environments</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
