@@ -1,0 +1,26 @@
+"""
+HALog Requirements File
+All dependencies for the LINAC log file analyzer application
+"""
+
+# Core GUI framework
+PyQt5>=5.15.0
+
+# Data processing and analysis
+pandas>=1.3.0
+numpy>=1.20.0
+
+# Data visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Scientific computing and analytics
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# File handling and utilities
+openpyxl>=3.0.0  # For Excel file support
+python-dateutil>=2.8.0
+
+# Optional: For better performance
+numba>=0.50.0

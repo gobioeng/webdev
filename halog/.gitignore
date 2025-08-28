@@ -1,0 +1,40 @@
+# HALog Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Test output files
+test_output/
+test_data/*.png
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Distribution files
+build/
+dist/
+*.egg-info/
+
+# PyQt Designer files
+*.ui~
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
